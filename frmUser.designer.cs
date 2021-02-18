@@ -130,7 +130,7 @@ namespace VTDI_CSS
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gold;
-            this.panel3.Location = new System.Drawing.Point(0, 133);
+            this.panel3.Location = new System.Drawing.Point(0, 357);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 47);
             this.panel3.TabIndex = 2;
