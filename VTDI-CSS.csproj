@@ -34,19 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="JDragControl">
-      <HintPath>..\..\..\..\..\Downloads\JControls\JDragControl.dll</HintPath>
-    </Reference>
-    <Reference Include="JImageButton">
-      <HintPath>..\..\..\..\..\Downloads\JControls\JImageButton.dll</HintPath>
-    </Reference>
-    <Reference Include="JMaterialTextbox">
-      <HintPath>..\..\..\..\..\Downloads\JControls\JMaterialTextbox.dll</HintPath>
+      <HintPath>..\..\..\Downloads\JControls\JDragControl.dll</HintPath>
     </Reference>
     <Reference Include="JMetroTextBox">
-      <HintPath>..\..\..\..\..\Downloads\JControls\JMetroTextBox.dll</HintPath>
+      <HintPath>..\..\..\Downloads\JControls\JMetroTextBox.dll</HintPath>
     </Reference>
     <Reference Include="JThinButton">
-      <HintPath>..\..\..\..\..\Downloads\JControls\JThinButton.dll</HintPath>
+      <HintPath>..\..\..\Downloads\JControls\JThinButton.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -54,6 +48,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +67,12 @@
     </Compile>
     <Compile Include="frmActivityLog.designer.cs">
       <DependentUpon>frmActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdminDashboard.cs">
       <SubType>Form</SubType>
@@ -99,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmActivityLog.resx">
       <DependentUpon>frmActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>

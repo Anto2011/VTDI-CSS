@@ -109,11 +109,11 @@ namespace VTDI_CSS
             // 
             // jDragControl1
             // 
-            this.jDragControl1.GetForm = this;
+           this.jDragControl1.GetForm = this;
             this.jDragControl1.TargetControl = this.Headerpanel;
             // 
             // Usernametxt
-            // 
+            
             this.Usernametxt.BackColor = System.Drawing.Color.Transparent;
             this.Usernametxt.BorderColor = System.Drawing.Color.Silver;
             this.Usernametxt.BorderRadius = 13;
@@ -163,7 +163,7 @@ namespace VTDI_CSS
             this.Passwordtxt.TextName = "Password";
             // 
             // Signinbtn
-            // 
+            
             this.Signinbtn.BackColor = System.Drawing.Color.Transparent;
             this.Signinbtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
             this.Signinbtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
@@ -263,7 +263,7 @@ namespace VTDI_CSS
             this.ClientSize = new System.Drawing.Size(888, 551);
             this.Controls.Add(this.createaccountlbl);
             this.Controls.Add(this.forgotpasswordlbl);
-            this.Controls.Add(this.Googleloginbtn);
+           this.Controls.Add(this.Googleloginbtn);
             this.Controls.Add(this.Facebookloginbtn);
             this.Controls.Add(this.remembermebox);
             this.Controls.Add(this.Signinbtn);
