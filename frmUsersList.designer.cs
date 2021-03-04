@@ -1,7 +1,7 @@
 ﻿
 namespace VTDI_CSS
 {
-    partial class frmUser
+    partial class frmUsersList
     {
         /// <summary>
         /// Required designer variable.
@@ -124,7 +124,7 @@ namespace VTDI_CSS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 788);
+            this.panel1.Size = new System.Drawing.Size(228, 900);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -263,7 +263,7 @@ namespace VTDI_CSS
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(228, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1158, 93);
+            this.panel2.Size = new System.Drawing.Size(1272, 93);
             this.panel2.TabIndex = 1;
             // 
             // label13
@@ -688,6 +688,7 @@ namespace VTDI_CSS
             // 
             // dataGridviewUsers
             // 
+            this.dataGridviewUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridviewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridviewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -699,7 +700,7 @@ namespace VTDI_CSS
             this.department_unit});
             this.dataGridviewUsers.Location = new System.Drawing.Point(228, 316);
             this.dataGridviewUsers.Name = "dataGridviewUsers";
-            this.dataGridviewUsers.Size = new System.Drawing.Size(1158, 472);
+            this.dataGridviewUsers.Size = new System.Drawing.Size(1272, 584);
             this.dataGridviewUsers.TabIndex = 22;
             // 
             // id
@@ -742,7 +743,7 @@ namespace VTDI_CSS
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.dataGridviewUsers);
             this.Controls.Add(this.pnlTicketsCenter);
             this.Controls.Add(this.pnlShadow10);

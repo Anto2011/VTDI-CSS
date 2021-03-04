@@ -15,7 +15,7 @@ using System.Web;
 
 namespace VTDI_CSS
 {
-    public partial class frmActivityLog : Form
+    public partial class frmStudentTickets : Form
     {
 
         Point lastPoint;
@@ -37,7 +37,7 @@ namespace VTDI_CSS
             int nHeightEllipse // height of ellipse
         );
 
-        public frmActivityLog()
+        public frmStudentTickets()
         {
             InitializeComponent();
             tmrDateTime.Start();

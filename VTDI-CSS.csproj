@@ -33,14 +33,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FlatButton">
+      <HintPath>..\Add-Ons\FlatButton.dll</HintPath>
+    </Reference>
     <Reference Include="JDragControl">
-      <HintPath>..\..\..\Downloads\JControls\JDragControl.dll</HintPath>
+      <HintPath>..\Add-Ons\JDragControl.dll</HintPath>
+    </Reference>
+    <Reference Include="JGradient Panel">
+      <HintPath>..\Add-Ons\JGradient Panel.dll</HintPath>
+    </Reference>
+    <Reference Include="JImageButton">
+      <HintPath>..\Add-Ons\JImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JMaterialTextbox">
+      <HintPath>..\Add-Ons\JMaterialTextbox.dll</HintPath>
     </Reference>
     <Reference Include="JMetroTextBox">
-      <HintPath>..\..\..\Downloads\JControls\JMetroTextBox.dll</HintPath>
+      <HintPath>..\Add-Ons\JMetroTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox">
+      <HintPath>..\Add-Ons\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox2">
+      <HintPath>..\Add-Ons\JTextBox2.dll</HintPath>
     </Reference>
     <Reference Include="JThinButton">
-      <HintPath>..\..\..\Downloads\JControls\JThinButton.dll</HintPath>
+      <HintPath>..\Add-Ons\JThinButton.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -62,17 +80,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmStudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentDashboard.Designer.cs">
+      <DependentUpon>frmStudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewTickets.Designer.cs">
+      <DependentUpon>frmViewTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentTickets.designer.cs">
+      <DependentUpon>frmStudentTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmActivityLog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmActivityLog.designer.cs">
       <DependentUpon>frmActivityLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUser.cs">
+    <Compile Include="frmTicketsSend.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUser.designer.cs">
-      <DependentUpon>frmUser.cs</DependentUpon>
+    <Compile Include="frmTicketsSend.Designer.cs">
+      <DependentUpon>frmTicketsSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminTickets.Designer.cs">
+      <DependentUpon>frmAdminTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsersList.designer.cs">
+      <DependentUpon>frmUsersList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdminDashboard.cs">
       <SubType>Form</SubType>
@@ -100,11 +148,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmStudentDashboard.resx">
+      <DependentUpon>frmStudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewTickets.resx">
+      <DependentUpon>frmViewTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentTickets.resx">
+      <DependentUpon>frmStudentTickets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmActivityLog.resx">
       <DependentUpon>frmActivityLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUser.resx">
-      <DependentUpon>frmUser.cs</DependentUpon>
+    <EmbeddedResource Include="frmTicketsSend.resx">
+      <DependentUpon>frmTicketsSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminTickets.resx">
+      <DependentUpon>frmAdminTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsersList.resx">
+      <DependentUpon>frmUsersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
@@ -146,6 +209,7 @@
     <None Include="Resources\vtdiweblogo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\attachment.png" />
     <Content Include="Resources\clock.png" />
     <Content Include="Resources\dashboard.png" />
     <None Include="Resources\home2.png" />
@@ -158,11 +222,14 @@
     <None Include="Resources\pending.png" />
     <Content Include="Resources\profile.png" />
     <None Include="Resources\profile1.png" />
+    <None Include="Resources\send.png" />
     <Content Include="Resources\sticky-notes.png" />
     <None Include="Resources\up-arrow.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\tickets2.png" />
     <None Include="Resources\users.png" />
+    <None Include="Resources\tickets.png" />
+    <None Include="Resources\trash.png" />
     <Content Include="Resources\vtdi_logo75.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

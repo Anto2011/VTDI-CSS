@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Web;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 
 namespace VTDI_CSS
 {
-    public partial class frmUser: Form
+    public partial class frmUsersList: Form
     {
 
         Point lastPoint;
@@ -37,7 +37,7 @@ namespace VTDI_CSS
             int nHeightEllipse // height of ellipse
         );
 
-        public frmUser()
+        public frmUsersList()
         {
             InitializeComponent();
             tmrDateTime.Start();

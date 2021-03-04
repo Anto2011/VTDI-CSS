@@ -11,11 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Web;
-//using Newtonsoft.Json;
 
 namespace VTDI_CSS
 {
-    public partial class frmActivityLog : Form
+    public partial class frmStudentDashboard : Form
     {
 
         Point lastPoint;
@@ -37,22 +36,30 @@ namespace VTDI_CSS
             int nHeightEllipse // height of ellipse
         );
 
-        public frmActivityLog()
+        public frmStudentDashboard()
         {
             InitializeComponent();
-            tmrDateTime.Start();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            tmrDateTime.Start();
         }
 
-        protected override CreateParams CreateParams {
-            get {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
                 CreateParams cp = base.CreateParams;
                 cp.ClassStyle |= dropShadow;
                 return cp;
             }
         }
 
-        private void frmActivityLog_Load(object sender, EventArgs e)
+        private void tmrDateTime_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            this.lblDateTime.Text = dateTime.ToString();
+        }
+
+        private void frmTickets_Load(object sender, EventArgs e)
         {
             this.btnDashboard.Image = (Image)(new Bitmap(homeIcon, new Size(40, 40)));
             this.btnTickets.Image = (Image)(new Bitmap(ticketIcon, new Size(40, 30)));
@@ -65,33 +72,18 @@ namespace VTDI_CSS
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void tmrDateTime_Tick(object sender, EventArgs e)
-        {
-            DateTime dateTime = DateTime.Now;
-            this.lblDateTime.Text = dateTime.ToString();
-        }
-
-        private void frmActivityLog_MouseDown(object sender, MouseEventArgs e)
+        private void frmTickets_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void frmActivityLog_MouseMove(object sender, MouseEventArgs e)
+        private void frmTickets_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) {
+            if (e.Button == MouseButtons.Left)
+            {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
-        }
-
-        private void btnMinimize_MouseEnter(object sender, EventArgs e)
-        {
-            btnMinimize.ForeColor = Color.Black;
-        }
-
-        private void btnMinimize_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimize.ForeColor = Color.DimGray;
         }
 
         private void btnDashboard_MouseEnter(object sender, EventArgs e)
@@ -134,6 +126,96 @@ namespace VTDI_CSS
             btnExit.ForeColor = Color.Gainsboro;
         }
 
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.ForeColor = Color.Black;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.ForeColor = Color.DimGray;
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true)
+            {
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+            else
+            {
+                pnlUserMenu.Visible = true;
+                pnlShadow7.Visible = true;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+            }
+        }
+
+        private void pbxMessages_Click(object sender, EventArgs e)
+        {
+            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true)
+            {
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+            }
+            else
+            {
+                pnlMessageCenter.Visible = true;
+                pnlShadow8.Visible = true;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+        }
+
+        private void pbxAlertsCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true)
+            {
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+            }
+            else
+            {
+                pnlAlertsCenter.Visible = true;
+                pnlShadow9.Visible = true;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+        }
+
+        private void pbxTicketsCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true)
+            {
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+            }
+            else
+            {
+                pnlTicketsCenter.Visible = true;
+                pnlShadow10.Visible = true;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+        }
+
         private void pnlShadow7_Paint(object sender, PaintEventArgs e)
         {
             pnlShadow7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 180, 170, 20, 20));
@@ -174,116 +256,14 @@ namespace VTDI_CSS
             pnlTicketsCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
         }
 
-        private void lblUsername_Click(object sender, EventArgs e)
+        private void pnlWelcome_Paint(object sender, PaintEventArgs e)
         {
-            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true) {
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-            else {
-                pnlUserMenu.Visible = true;
-                pnlShadow7.Visible = true;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-            }
+            pnlWelcome.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1080, 199, 20, 20));
         }
 
-        private void pbxMessages_Click(object sender, EventArgs e)
+        private void pnlShadow1_Paint(object sender, PaintEventArgs e)
         {
-            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true) {
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-            }
-            else {
-                pnlMessageCenter.Visible = true;
-                pnlShadow8.Visible = true;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
-        private void pbxAlertsCenter_Click(object sender, EventArgs e)
-        {
-            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true) {
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-            }
-            else {
-                pnlAlertsCenter.Visible = true;
-                pnlShadow9.Visible = true;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
-        private void pbxTicketsCenter_Click(object sender, EventArgs e)
-        {
-            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true) {
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-            }
-            else {
-                pnlTicketsCenter.Visible = true;
-                pnlShadow10.Visible = true;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
-        {
-            btnProfile.ForeColor = Color.Black;
-        }
-
-        private void btnProfile_MouseLeave(object sender, EventArgs e)
-        {
-            btnProfile.ForeColor = Color.DimGray;
-        }
-
-        private void btnSettings_MouseEnter(object sender, EventArgs e)
-        {
-            btnSettings.ForeColor = Color.Black;
-        }
-
-        private void btnSettings_MouseLeave(object sender, EventArgs e)
-        {
-            btnSettings.ForeColor = Color.DimGray;
-        }
-
-        private void btnActivityLog_MouseEnter(object sender, EventArgs e)
-        {
-            btnActivityLog.ForeColor = Color.Black;
-        }
-
-        private void btnActivityLog_MouseLeave(object sender, EventArgs e)
-        {
-            btnActivityLog.ForeColor = Color.DimGray;
-        }
-
-        private void btnLogout_MouseEnter(object sender, EventArgs e)
-        {
-            btnLogout.ForeColor = Color.Black;
-        }
-
-        private void btnLogout_MouseLeave(object sender, EventArgs e)
-        {
-            btnLogout.ForeColor = Color.DimGray;
+            pnlShadow1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1080, 199, 20, 20));
         }
     }
 }
