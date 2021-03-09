@@ -313,7 +313,7 @@ namespace VTDI_CSS
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 73);
             this.label3.TabIndex = 10;
-            this.label3.Text = "CSS ADMIN";
+            this.label3.Text = "VTDI CSS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2

@@ -22,8 +22,8 @@ namespace VTDI_CSS
         private const int dropShadow = 0x20000;
 
         Image homeIcon = VTDI_CSS.Properties.Resources.home2;
-        Image ticketIcon = VTDI_CSS.Properties.Resources.tickets2;
-        Image userIcon = VTDI_CSS.Properties.Resources.users;
+        Image resourcesIcon = VTDI_CSS.Properties.Resources.folder;
+        Image aboutIcon = VTDI_CSS.Properties.Resources.about;
         Image exitIcon = VTDI_CSS.Properties.Resources.exit;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -55,8 +55,8 @@ namespace VTDI_CSS
         private void frmActivityLog_Load(object sender, EventArgs e)
         {
             this.btnDashboard.Image = (Image)(new Bitmap(homeIcon, new Size(40, 40)));
-            this.btnTickets.Image = (Image)(new Bitmap(ticketIcon, new Size(40, 30)));
-            this.btnUsers.Image = (Image)(new Bitmap(userIcon, new Size(40, 40)));
+            this.btnTickets.Image = (Image)(new Bitmap(resourcesIcon, new Size(40, 40)));
+            this.btnUsers.Image = (Image)(new Bitmap(aboutIcon, new Size(50, 45)));
             this.btnExit.Image = (Image)(new Bitmap(exitIcon, new Size(40, 40)));
         }
 

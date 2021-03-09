@@ -334,5 +334,12 @@ namespace VTDI_CSS
                 //openFileDialog1.FileName .....
             }
         }
+
+        private void pbxReply_Click(object sender, EventArgs e)
+        {
+            lblReply.Visible = true;
+            rtbReply.Visible = true;
+            rtbMessage.Size = new Size(1029, 225);
+        }
     }
 }

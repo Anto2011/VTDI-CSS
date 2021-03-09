@@ -32,19 +32,12 @@ namespace VTDI_CSS
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.pbxTicketsCenter = new System.Windows.Forms.PictureBox();
-            this.pbxMessages = new System.Windows.Forms.PictureBox();
-            this.pbxAlertsCenter = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,26 +74,26 @@ namespace VTDI_CSS
             this.label17 = new System.Windows.Forms.Label();
             this.rtbMessage = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbxSend = new System.Windows.Forms.PictureBox();
-            this.pbxTrash = new System.Windows.Forms.PictureBox();
-            this.pbxAttachment = new System.Windows.Forms.PictureBox();
             this.lblUnderline = new System.Windows.Forms.Label();
             this.lblItalic = new System.Windows.Forms.Label();
             this.lblBold = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblReply = new System.Windows.Forms.Label();
             this.rtbReply = new System.Windows.Forms.RichTextBox();
             this.ofdUploadFile = new System.Windows.Forms.OpenFileDialog();
+            this.pbxReply = new System.Windows.Forms.PictureBox();
+            this.pbxEscalate = new System.Windows.Forms.PictureBox();
+            this.pbxSend = new System.Windows.Forms.PictureBox();
+            this.pbxTrash = new System.Windows.Forms.PictureBox();
+            this.pbxAttachment = new System.Windows.Forms.PictureBox();
+            this.pbxTicketsCenter = new System.Windows.Forms.PictureBox();
+            this.pbxMessages = new System.Windows.Forms.PictureBox();
+            this.pbxAlertsCenter = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTicketsCenter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMessages)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAlertsCenter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlTicketsCenter.SuspendLayout();
             this.panel8.SuspendLayout();
             this.pnlAlertsCenter.SuspendLayout();
@@ -109,11 +102,18 @@ namespace VTDI_CSS
             this.panel5.SuspendLayout();
             this.pnlUserMenu.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxReply)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEscalate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSend)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTrash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAttachment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTicketsCenter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMessages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAlertsCenter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -145,69 +145,6 @@ namespace VTDI_CSS
             this.label13.Size = new System.Drawing.Size(35, 101);
             this.label13.TabIndex = 13;
             this.label13.Text = "|";
-            // 
-            // pbxTicketsCenter
-            // 
-            this.pbxTicketsCenter.Image = global::VTDI_CSS.Properties.Resources.sticky_notes;
-            this.pbxTicketsCenter.Location = new System.Drawing.Point(515, 45);
-            this.pbxTicketsCenter.Name = "pbxTicketsCenter";
-            this.pbxTicketsCenter.Size = new System.Drawing.Size(30, 29);
-            this.pbxTicketsCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxTicketsCenter.TabIndex = 11;
-            this.pbxTicketsCenter.TabStop = false;
-            this.pbxTicketsCenter.Click += new System.EventHandler(this.pbxTicketsCenter_Click);
-            // 
-            // pbxMessages
-            // 
-            this.pbxMessages.Image = global::VTDI_CSS.Properties.Resources.mail;
-            this.pbxMessages.Location = new System.Drawing.Point(642, 45);
-            this.pbxMessages.Name = "pbxMessages";
-            this.pbxMessages.Size = new System.Drawing.Size(30, 29);
-            this.pbxMessages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxMessages.TabIndex = 10;
-            this.pbxMessages.TabStop = false;
-            this.pbxMessages.Click += new System.EventHandler(this.pbxMessages_Click);
-            // 
-            // pbxAlertsCenter
-            // 
-            this.pbxAlertsCenter.Image = global::VTDI_CSS.Properties.Resources.notification;
-            this.pbxAlertsCenter.Location = new System.Drawing.Point(578, 45);
-            this.pbxAlertsCenter.Name = "pbxAlertsCenter";
-            this.pbxAlertsCenter.Size = new System.Drawing.Size(30, 29);
-            this.pbxAlertsCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxAlertsCenter.TabIndex = 9;
-            this.pbxAlertsCenter.TabStop = false;
-            this.pbxAlertsCenter.Click += new System.EventHandler(this.pbxAlertsCenter_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::VTDI_CSS.Properties.Resources.profile;
-            this.pictureBox3.Location = new System.Drawing.Point(1040, 45);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::VTDI_CSS.Properties.Resources.clock;
-            this.pictureBox2.Location = new System.Drawing.Point(727, 45);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VTDI_CSS.Properties.Resources.tickets;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // btnMinimize
             // 
@@ -283,16 +220,6 @@ namespace VTDI_CSS
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 47);
             this.panel4.TabIndex = 13;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::VTDI_CSS.Properties.Resources.vtdi_logo75;
-            this.pictureBox4.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(119, 75);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
             // 
             // btnDashboard
             // 
@@ -690,7 +617,7 @@ namespace VTDI_CSS
             this.rtbMessage.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.rtbMessage.Location = new System.Drawing.Point(402, 357);
             this.rtbMessage.Name = "rtbMessage";
-            this.rtbMessage.Size = new System.Drawing.Size(1029, 225);
+            this.rtbMessage.Size = new System.Drawing.Size(1029, 500);
             this.rtbMessage.TabIndex = 38;
             this.rtbMessage.Text = "";
             // 
@@ -698,8 +625,8 @@ namespace VTDI_CSS
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.pbxReply);
+            this.panel3.Controls.Add(this.pbxEscalate);
             this.panel3.Controls.Add(this.pbxSend);
             this.panel3.Controls.Add(this.pbxTrash);
             this.panel3.Controls.Add(this.pbxAttachment);
@@ -710,37 +637,6 @@ namespace VTDI_CSS
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(51, 500);
             this.panel3.TabIndex = 41;
-            // 
-            // pbxSend
-            // 
-            this.pbxSend.Image = global::VTDI_CSS.Properties.Resources.send;
-            this.pbxSend.Location = new System.Drawing.Point(6, 440);
-            this.pbxSend.Name = "pbxSend";
-            this.pbxSend.Size = new System.Drawing.Size(33, 40);
-            this.pbxSend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxSend.TabIndex = 45;
-            this.pbxSend.TabStop = false;
-            // 
-            // pbxTrash
-            // 
-            this.pbxTrash.Image = global::VTDI_CSS.Properties.Resources.trash;
-            this.pbxTrash.Location = new System.Drawing.Point(6, 376);
-            this.pbxTrash.Name = "pbxTrash";
-            this.pbxTrash.Size = new System.Drawing.Size(33, 40);
-            this.pbxTrash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxTrash.TabIndex = 44;
-            this.pbxTrash.TabStop = false;
-            // 
-            // pbxAttachment
-            // 
-            this.pbxAttachment.Image = global::VTDI_CSS.Properties.Resources.attachment;
-            this.pbxAttachment.Location = new System.Drawing.Point(6, 310);
-            this.pbxAttachment.Name = "pbxAttachment";
-            this.pbxAttachment.Size = new System.Drawing.Size(33, 40);
-            this.pbxAttachment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxAttachment.TabIndex = 41;
-            this.pbxAttachment.TabStop = false;
-            this.pbxAttachment.Click += new System.EventHandler(this.pbxAttachment_Click);
             // 
             // lblUnderline
             // 
@@ -775,35 +671,16 @@ namespace VTDI_CSS
             this.lblBold.Text = "B";
             this.lblBold.Click += new System.EventHandler(this.lblBold_Click);
             // 
-            // pictureBox5
+            // lblReply
             // 
-            this.pictureBox5.Image = global::VTDI_CSS.Properties.Resources.attachment;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 242);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 46;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::VTDI_CSS.Properties.Resources.attachment;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 177);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 47;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(250, 632);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 25);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "Reply:";
+            this.lblReply.AutoSize = true;
+            this.lblReply.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReply.Location = new System.Drawing.Point(250, 632);
+            this.lblReply.Name = "lblReply";
+            this.lblReply.Size = new System.Drawing.Size(66, 25);
+            this.lblReply.TabIndex = 42;
+            this.lblReply.Text = "Reply:";
+            this.lblReply.Visible = false;
             // 
             // rtbReply
             // 
@@ -814,6 +691,132 @@ namespace VTDI_CSS
             this.rtbReply.Size = new System.Drawing.Size(1029, 225);
             this.rtbReply.TabIndex = 43;
             this.rtbReply.Text = "";
+            this.rtbReply.Visible = false;
+            // 
+            // pbxReply
+            // 
+            this.pbxReply.Image = global::VTDI_CSS.Properties.Resources.reply;
+            this.pbxReply.Location = new System.Drawing.Point(6, 177);
+            this.pbxReply.Name = "pbxReply";
+            this.pbxReply.Size = new System.Drawing.Size(33, 40);
+            this.pbxReply.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxReply.TabIndex = 47;
+            this.pbxReply.TabStop = false;
+            this.pbxReply.Click += new System.EventHandler(this.pbxReply_Click);
+            // 
+            // pbxEscalate
+            // 
+            this.pbxEscalate.Image = global::VTDI_CSS.Properties.Resources.elevate;
+            this.pbxEscalate.Location = new System.Drawing.Point(6, 242);
+            this.pbxEscalate.Name = "pbxEscalate";
+            this.pbxEscalate.Size = new System.Drawing.Size(33, 40);
+            this.pbxEscalate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxEscalate.TabIndex = 46;
+            this.pbxEscalate.TabStop = false;
+            // 
+            // pbxSend
+            // 
+            this.pbxSend.Image = global::VTDI_CSS.Properties.Resources.send;
+            this.pbxSend.Location = new System.Drawing.Point(6, 440);
+            this.pbxSend.Name = "pbxSend";
+            this.pbxSend.Size = new System.Drawing.Size(33, 40);
+            this.pbxSend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSend.TabIndex = 45;
+            this.pbxSend.TabStop = false;
+            // 
+            // pbxTrash
+            // 
+            this.pbxTrash.Image = global::VTDI_CSS.Properties.Resources.trash;
+            this.pbxTrash.Location = new System.Drawing.Point(6, 376);
+            this.pbxTrash.Name = "pbxTrash";
+            this.pbxTrash.Size = new System.Drawing.Size(33, 40);
+            this.pbxTrash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxTrash.TabIndex = 44;
+            this.pbxTrash.TabStop = false;
+            // 
+            // pbxAttachment
+            // 
+            this.pbxAttachment.Image = global::VTDI_CSS.Properties.Resources.attachment;
+            this.pbxAttachment.Location = new System.Drawing.Point(6, 310);
+            this.pbxAttachment.Name = "pbxAttachment";
+            this.pbxAttachment.Size = new System.Drawing.Size(33, 40);
+            this.pbxAttachment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxAttachment.TabIndex = 41;
+            this.pbxAttachment.TabStop = false;
+            this.pbxAttachment.Click += new System.EventHandler(this.pbxAttachment_Click);
+            // 
+            // pbxTicketsCenter
+            // 
+            this.pbxTicketsCenter.Image = global::VTDI_CSS.Properties.Resources.sticky_notes;
+            this.pbxTicketsCenter.Location = new System.Drawing.Point(515, 45);
+            this.pbxTicketsCenter.Name = "pbxTicketsCenter";
+            this.pbxTicketsCenter.Size = new System.Drawing.Size(30, 29);
+            this.pbxTicketsCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxTicketsCenter.TabIndex = 11;
+            this.pbxTicketsCenter.TabStop = false;
+            this.pbxTicketsCenter.Click += new System.EventHandler(this.pbxTicketsCenter_Click);
+            // 
+            // pbxMessages
+            // 
+            this.pbxMessages.Image = global::VTDI_CSS.Properties.Resources.mail;
+            this.pbxMessages.Location = new System.Drawing.Point(642, 45);
+            this.pbxMessages.Name = "pbxMessages";
+            this.pbxMessages.Size = new System.Drawing.Size(30, 29);
+            this.pbxMessages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxMessages.TabIndex = 10;
+            this.pbxMessages.TabStop = false;
+            this.pbxMessages.Click += new System.EventHandler(this.pbxMessages_Click);
+            // 
+            // pbxAlertsCenter
+            // 
+            this.pbxAlertsCenter.Image = global::VTDI_CSS.Properties.Resources.notification;
+            this.pbxAlertsCenter.Location = new System.Drawing.Point(578, 45);
+            this.pbxAlertsCenter.Name = "pbxAlertsCenter";
+            this.pbxAlertsCenter.Size = new System.Drawing.Size(30, 29);
+            this.pbxAlertsCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxAlertsCenter.TabIndex = 9;
+            this.pbxAlertsCenter.TabStop = false;
+            this.pbxAlertsCenter.Click += new System.EventHandler(this.pbxAlertsCenter_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::VTDI_CSS.Properties.Resources.profile;
+            this.pictureBox3.Location = new System.Drawing.Point(1040, 45);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::VTDI_CSS.Properties.Resources.clock;
+            this.pictureBox2.Location = new System.Drawing.Point(727, 45);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VTDI_CSS.Properties.Resources.tickets;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::VTDI_CSS.Properties.Resources.vtdi_logo75;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(119, 75);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
             // 
             // frmViewTickets
             // 
@@ -821,7 +824,7 @@ namespace VTDI_CSS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.rtbReply);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblReply);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.rtbMessage);
             this.Controls.Add(this.label17);
@@ -850,15 +853,8 @@ namespace VTDI_CSS
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmTickets_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTicketsCenter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMessages)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAlertsCenter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlTicketsCenter.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -871,11 +867,18 @@ namespace VTDI_CSS
             this.pnlUserMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxReply)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEscalate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSend)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTrash)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAttachment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTicketsCenter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMessages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAlertsCenter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -940,9 +943,9 @@ namespace VTDI_CSS
         private System.Windows.Forms.Label lblUnderline;
         private System.Windows.Forms.Label lblItalic;
         private System.Windows.Forms.Label lblBold;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pbxReply;
+        private System.Windows.Forms.PictureBox pbxEscalate;
+        private System.Windows.Forms.Label lblReply;
         private System.Windows.Forms.RichTextBox rtbReply;
         private System.Windows.Forms.OpenFileDialog ofdUploadFile;
     }

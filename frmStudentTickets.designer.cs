@@ -42,6 +42,7 @@
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,7 +77,6 @@
             this.pnlShadow7 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSearch = new JMetroTextBox.JMetroTextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTicketsCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMessages)).BeginInit();
@@ -256,6 +256,14 @@
             this.panel1.Size = new System.Drawing.Size(228, 900);
             this.panel1.TabIndex = 2;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gold;
+            this.panel4.Location = new System.Drawing.Point(0, 245);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 47);
+            this.panel4.TabIndex = 14;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::VTDI_CSS.Properties.Resources.vtdi_logo75;
@@ -291,7 +299,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 73);
             this.label3.TabIndex = 10;
-            this.label3.Text = "CSS ADMIN";
+            this.label3.Text = "VTDI CSS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -666,14 +674,6 @@
             this.txtSearch.TabIndex = 43;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSearch.TextName = "JMetroTextBox";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gold;
-            this.panel4.Location = new System.Drawing.Point(0, 245);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 47);
-            this.panel4.TabIndex = 14;
             // 
             // frmStudentTickets
             // 

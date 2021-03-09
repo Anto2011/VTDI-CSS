@@ -80,6 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLiveChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiveChat.designer.cs">
+      <DependentUpon>frmLiveChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLiveChat.resx">
+      <DependentUpon>frmLiveChat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentDashboard.resx">
       <DependentUpon>frmStudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,11 +219,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\attachment.png" />
+    <None Include="Resources\about.png" />
     <Content Include="Resources\clock.png" />
     <Content Include="Resources\dashboard.png" />
     <None Include="Resources\home2.png" />
     <None Include="Resources\exit.png" />
     <None Include="Resources\log.png" />
+    <None Include="Resources\files.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\elevate.png" />
     <Content Include="Resources\mail.png" />
     <None Include="Resources\notepad.png" />
     <Content Include="Resources\notes.png" />
@@ -223,6 +236,7 @@
     <Content Include="Resources\profile.png" />
     <None Include="Resources\profile1.png" />
     <None Include="Resources\send.png" />
+    <None Include="Resources\reply.png" />
     <Content Include="Resources\sticky-notes.png" />
     <None Include="Resources\up-arrow.png" />
     <None Include="Resources\tick.png" />
@@ -230,6 +244,7 @@
     <None Include="Resources\users.png" />
     <None Include="Resources\tickets.png" />
     <None Include="Resources\trash.png" />
+    <None Include="Resources\user-animate.png" />
     <Content Include="Resources\vtdi_logo75.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
