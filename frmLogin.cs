@@ -14,6 +14,8 @@ namespace VTDI_CSS
     public partial class frmLogin : Form
     {
 
+        Point lastPoint;
+        private const int dropShadow = 0x20000;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -32,22 +34,45 @@ namespace VTDI_CSS
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        protected override CreateParams CreateParams
         {
-            this.Close();
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= dropShadow;
+                return cp;
+            }
         }
 
-        private void minimizelbl_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void frmLogin_MouseDown(object sender, MouseEventArgs e)
         {
-            frmRegister reg = new frmRegister();
-            this.Hide();
-            reg.Show(); 
+            lastPoint = new Point(e.X, e.Y);
+        }
 
+        private void frmLogin_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void lblCreateAccount_Click(object sender, EventArgs e)
+        {
+            frmRegister register = new frmRegister();
+            this.Hide();
+            register.Show();
         }
     }
 }

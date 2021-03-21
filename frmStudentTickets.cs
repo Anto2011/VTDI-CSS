@@ -54,21 +54,7 @@ namespace VTDI_CSS
 
         private void frmActivityLog_Load(object sender, EventArgs e)
         {
-            this.btnDashboard.Image = (Image)(new Bitmap(homeIcon, new Size(40, 40)));
-            this.btnTickets.Image = (Image)(new Bitmap(resourcesIcon, new Size(40, 40)));
-            this.btnUsers.Image = (Image)(new Bitmap(aboutIcon, new Size(50, 45)));
-            this.btnExit.Image = (Image)(new Bitmap(exitIcon, new Size(40, 40)));
-        }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void tmrDateTime_Tick(object sender, EventArgs e)
-        {
-            DateTime dateTime = DateTime.Now;
-            this.lblDateTime.Text = dateTime.ToString();
         }
 
         private void frmActivityLog_MouseDown(object sender, MouseEventArgs e)
@@ -84,103 +70,66 @@ namespace VTDI_CSS
             }
         }
 
-        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        private void tmrDateTime_Tick(object sender, EventArgs e)
         {
-            btnMinimize.ForeColor = Color.Black;
+            DateTime dateTime = DateTime.Now;
+            this.lblDateTime.Text = dateTime.ToString();
         }
 
-        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        private void pnlTopNav_Paint(object sender, PaintEventArgs e)
         {
-            btnMinimize.ForeColor = Color.DimGray;
+            pnlTopNav.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1350, 70, 20, 20));
         }
 
         private void btnDashboard_MouseEnter(object sender, EventArgs e)
         {
-            btnDashboard.ForeColor = Color.White;
+            lblDashboard.Visible = true;
         }
 
         private void btnDashboard_MouseLeave(object sender, EventArgs e)
         {
-            btnDashboard.ForeColor = Color.Gainsboro;
+            lblDashboard.Visible = false;
         }
 
-        private void btnTickets_MouseEnter(object sender, EventArgs e)
+        private void btnResources_MouseEnter(object sender, EventArgs e)
         {
-            btnTickets.ForeColor = Color.White;
+            lblResource.Visible = true;
         }
 
-        private void btnTickets_MouseLeave(object sender, EventArgs e)
+        private void btnResources_MouseLeave(object sender, EventArgs e)
         {
-            btnTickets.ForeColor = Color.Gainsboro;
+            lblResource.Visible = false;
         }
 
-        private void btnUsers_MouseEnter(object sender, EventArgs e)
+        private void btnAbout_MouseEnter(object sender, EventArgs e)
         {
-            btnUsers.ForeColor = Color.White;
+            lblAbout.Visible = true;
         }
 
-        private void btnUsers_MouseLeave(object sender, EventArgs e)
+        private void btnAbout_MouseLeave(object sender, EventArgs e)
         {
-            btnUsers.ForeColor = Color.Gainsboro;
+            lblAbout.Visible = false;
         }
 
         private void btnExit_MouseEnter(object sender, EventArgs e)
         {
-            btnExit.ForeColor = Color.White;
+            lblSignOut.Visible = true;
         }
 
         private void btnExit_MouseLeave(object sender, EventArgs e)
         {
-            btnExit.ForeColor = Color.Gainsboro;
+            lblSignOut.Visible = false;
         }
 
-        private void pnlShadow7_Paint(object sender, PaintEventArgs e)
+        private void btnUserProfile_Click(object sender, EventArgs e)
         {
-            pnlShadow7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 180, 170, 20, 20));
-        }
-
-        private void pnlShadow8_Paint(object sender, PaintEventArgs e)
-        {
-            pnlShadow8.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 211, 20, 20));
-        }
-
-        private void pnlShadow9_Paint(object sender, PaintEventArgs e)
-        {
-            pnlShadow9.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
-        }
-
-        private void pnlShadow10_Paint(object sender, PaintEventArgs e)
-        {
-            pnlShadow10.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
-        }
-
-        private void pnlUserMenu_Paint(object sender, PaintEventArgs e)
-        {
-            pnlUserMenu.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 181, 170, 20, 20));
-        }
-
-        private void pnlMessageCenter_Paint(object sender, PaintEventArgs e)
-        {
-            pnlMessageCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
-        }
-
-        private void pnlAlertsCenter_Paint(object sender, PaintEventArgs e)
-        {
-            pnlAlertsCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
-        }
-
-        private void pnlTicketsCenter_Paint(object sender, PaintEventArgs e)
-        {
-            pnlTicketsCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
-        }
-
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true) {
+            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true)
+            {
                 pnlUserMenu.Visible = false;
                 pnlShadow7.Visible = false;
             }
-            else {
+            else
+            {
                 pnlUserMenu.Visible = true;
                 pnlShadow7.Visible = true;
                 pnlMessageCenter.Visible = false;
@@ -192,13 +141,15 @@ namespace VTDI_CSS
             }
         }
 
-        private void pbxMessages_Click(object sender, EventArgs e)
+        private void btnMessageCenter_Click(object sender, EventArgs e)
         {
-            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true) {
+            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true)
+            {
                 pnlMessageCenter.Visible = false;
                 pnlShadow8.Visible = false;
             }
-            else {
+            else
+            {
                 pnlMessageCenter.Visible = true;
                 pnlShadow8.Visible = true;
                 pnlAlertsCenter.Visible = false;
@@ -210,13 +161,15 @@ namespace VTDI_CSS
             }
         }
 
-        private void pbxAlertsCenter_Click(object sender, EventArgs e)
+        private void btnNotificationCenter_Click(object sender, EventArgs e)
         {
-            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true) {
+            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true)
+            {
                 pnlAlertsCenter.Visible = false;
                 pnlShadow9.Visible = false;
             }
-            else {
+            else
+            {
                 pnlAlertsCenter.Visible = true;
                 pnlShadow9.Visible = true;
                 pnlMessageCenter.Visible = false;
@@ -228,13 +181,15 @@ namespace VTDI_CSS
             }
         }
 
-        private void pbxTicketsCenter_Click(object sender, EventArgs e)
+        private void btnTicketCenter_Click(object sender, EventArgs e)
         {
-            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true) {
+            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true)
+            {
                 pnlTicketsCenter.Visible = false;
                 pnlShadow10.Visible = false;
             }
-            else {
+            else
+            {
                 pnlTicketsCenter.Visible = true;
                 pnlShadow10.Visible = true;
                 pnlAlertsCenter.Visible = false;
@@ -246,44 +201,49 @@ namespace VTDI_CSS
             }
         }
 
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
+        private void pnlShadow7_Paint(object sender, PaintEventArgs e)
         {
-            btnProfile.ForeColor = Color.Black;
+            pnlShadow7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 180, 170, 20, 20));
         }
 
-        private void btnProfile_MouseLeave(object sender, EventArgs e)
+        private void pnlUserMenu_Paint(object sender, PaintEventArgs e)
         {
-            btnProfile.ForeColor = Color.DimGray;
+            pnlUserMenu.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 181, 170, 20, 20));
         }
 
-        private void btnSettings_MouseEnter(object sender, EventArgs e)
+        private void pnlShadow8_Paint(object sender, PaintEventArgs e)
         {
-            btnSettings.ForeColor = Color.Black;
+            pnlShadow8.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 211, 20, 20));
         }
 
-        private void btnSettings_MouseLeave(object sender, EventArgs e)
+        private void pnlMessageCenter_Paint(object sender, PaintEventArgs e)
         {
-            btnSettings.ForeColor = Color.DimGray;
+            pnlMessageCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
         }
 
-        private void btnActivityLog_MouseEnter(object sender, EventArgs e)
+        private void pnlShadow9_Paint(object sender, PaintEventArgs e)
         {
-            btnActivityLog.ForeColor = Color.Black;
+            pnlShadow9.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
         }
 
-        private void btnActivityLog_MouseLeave(object sender, EventArgs e)
+        private void pnlAlertsCenter_Paint(object sender, PaintEventArgs e)
         {
-            btnActivityLog.ForeColor = Color.DimGray;
+            pnlAlertsCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
         }
 
-        private void btnLogout_MouseEnter(object sender, EventArgs e)
+        private void pnlShadow10_Paint(object sender, PaintEventArgs e)
         {
-            btnLogout.ForeColor = Color.Black;
+            pnlShadow10.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
         }
 
-        private void btnLogout_MouseLeave(object sender, EventArgs e)
+        private void pnlTicketsCenter_Paint(object sender, PaintEventArgs e)
         {
-            btnLogout.ForeColor = Color.DimGray;
+            pnlTicketsCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -136,86 +136,6 @@ namespace VTDI_CSS
             btnMinimize.ForeColor = Color.DimGray;
         }
 
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true)
-            {
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-            else
-            {
-                pnlUserMenu.Visible = true;
-                pnlShadow7.Visible = true;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-            }
-        }
-
-        private void pbxMessages_Click(object sender, EventArgs e)
-        {
-            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true)
-            {
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-            }
-            else
-            {
-                pnlMessageCenter.Visible = true;
-                pnlShadow8.Visible = true;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
-        private void pbxAlertsCenter_Click(object sender, EventArgs e)
-        {
-            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true)
-            {
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-            }
-            else
-            {
-                pnlAlertsCenter.Visible = true;
-                pnlShadow9.Visible = true;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
-        private void pbxTicketsCenter_Click(object sender, EventArgs e)
-        {
-            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true)
-            {
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-            }
-            else
-            {
-                pnlTicketsCenter.Visible = true;
-                pnlShadow10.Visible = true;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
         private void pnlShadow7_Paint(object sender, PaintEventArgs e)
         {
             pnlShadow7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 180, 170, 20, 20));
@@ -340,6 +260,86 @@ namespace VTDI_CSS
             lblReply.Visible = true;
             rtbReply.Visible = true;
             rtbMessage.Size = new Size(1029, 225);
+        }
+
+        private void btnUserProfile_Click(object sender, EventArgs e)
+        {
+            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true)
+            {
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+            else
+            {
+                pnlUserMenu.Visible = true;
+                pnlShadow7.Visible = true;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+            }
+        }
+
+        private void btnMessageCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true)
+            {
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+            }
+            else
+            {
+                pnlMessageCenter.Visible = true;
+                pnlShadow8.Visible = true;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+        }
+
+        private void btnNotificationCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true)
+            {
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+            }
+            else
+            {
+                pnlAlertsCenter.Visible = true;
+                pnlShadow9.Visible = true;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+        }
+
+        private void btnTicketCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true)
+            {
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+            }
+            else
+            {
+                pnlTicketsCenter.Visible = true;
+                pnlShadow10.Visible = true;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
         }
     }
 }

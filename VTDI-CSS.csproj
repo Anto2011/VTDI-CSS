@@ -80,17 +80,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLiveChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLiveChat.designer.cs">
-      <DependentUpon>frmLiveChat.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmStudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmStudentDashboard.Designer.cs">
       <DependentUpon>frmStudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLiveChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiveChat.designer.cs">
+      <DependentUpon>frmLiveChat.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewTickets.cs">
       <SubType>Form</SubType>
@@ -154,11 +154,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmLiveChat.resx">
-      <DependentUpon>frmLiveChat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentDashboard.resx">
       <DependentUpon>frmStudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLiveChat.resx">
+      <DependentUpon>frmLiveChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewTickets.resx">
       <DependentUpon>frmViewTickets.cs</DependentUpon>
@@ -220,6 +220,7 @@
   <ItemGroup>
     <None Include="Resources\attachment.png" />
     <None Include="Resources\about.png" />
+    <None Include="Resources\chat.png" />
     <Content Include="Resources\clock.png" />
     <Content Include="Resources\dashboard.png" />
     <None Include="Resources\home2.png" />
@@ -228,8 +229,14 @@
     <None Include="Resources\files.png" />
     <None Include="Resources\folder.png" />
     <None Include="Resources\elevate.png" />
+    <None Include="Resources\info-icon.png" />
+    <None Include="Resources\heart.png" />
     <Content Include="Resources\mail.png" />
     <None Include="Resources\notepad.png" />
+    <None Include="Resources\message.png" />
+    <None Include="Resources\message1.png" />
+    <None Include="Resources\message2.png" />
+    <None Include="Resources\message3.png" />
     <Content Include="Resources\notes.png" />
     <Content Include="Resources\notification.png" />
     <None Include="Resources\pending.png" />
@@ -245,6 +252,7 @@
     <None Include="Resources\tickets.png" />
     <None Include="Resources\trash.png" />
     <None Include="Resources\user-animate.png" />
+    <None Include="Resources\vtdi.png" />
     <Content Include="Resources\vtdi_logo75.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
