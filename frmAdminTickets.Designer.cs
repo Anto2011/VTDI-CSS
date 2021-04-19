@@ -459,7 +459,7 @@ namespace VTDI_CSS
             this.txtSearch.OnFocusFontColor = System.Drawing.Color.Empty;
             this.txtSearch.ReadOnly = false;
             this.txtSearch.Size = new System.Drawing.Size(334, 40);
-            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TabIndex = 1;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSearch.TextName = "Enter Name...";
             // 
@@ -709,7 +709,6 @@ namespace VTDI_CSS
             this.Controls.Add(this.pnlShadow8);
             this.Controls.Add(this.pnlUserMenu);
             this.Controls.Add(this.pnlShadow7);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -717,8 +716,10 @@ namespace VTDI_CSS
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdminTickets";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTickets";
             this.Load += new System.EventHandler(this.frmTickets_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmTickets_MouseDown);

@@ -245,5 +245,55 @@ namespace VTDI_CSS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.ForeColor = Color.Black;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.ForeColor = Color.DimGray;
+        }
+
+        private void btnProfile_MouseEnter(object sender, EventArgs e)
+        {
+            btnProfile.ForeColor = Color.Black;
+        }
+
+        private void btnProfile_MouseLeave(object sender, EventArgs e)
+        {
+            btnProfile.ForeColor = Color.DimGray;
+        }
+
+        private void btnSettings_MouseEnter(object sender, EventArgs e)
+        {
+            btnSettings.ForeColor = Color.Black;
+        }
+
+        private void btnSettings_MouseLeave(object sender, EventArgs e)
+        {
+            btnSettings.ForeColor = Color.DimGray;
+        }
+
+        private void btnActivityLog_MouseEnter(object sender, EventArgs e)
+        {
+            btnActivityLog.ForeColor = Color.Black;
+        }
+
+        private void btnActivityLog_MouseLeave(object sender, EventArgs e)
+        {
+            btnActivityLog.ForeColor = Color.DimGray;
+        }
+
+        private void btnLogout_MouseEnter(object sender, EventArgs e)
+        {
+            btnLogout.ForeColor = Color.Black;
+        }
+
+        private void btnLogout_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogout.ForeColor = Color.DimGray;
+        }
     }
 }

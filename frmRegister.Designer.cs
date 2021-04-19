@@ -116,6 +116,7 @@ namespace VTDI_CSS
             this.btnRegister.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
             this.btnRegister.BorderRadius = 19;
             this.btnRegister.ButtonText = "Register";
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Font_Size = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColors = System.Drawing.SystemColors.ControlLightLight;
@@ -141,6 +142,8 @@ namespace VTDI_CSS
             this.lblSignIn.TabIndex = 9;
             this.lblSignIn.Text = "Already Have An Account?";
             this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
+            this.lblSignIn.MouseEnter += new System.EventHandler(this.lblSignIn_MouseEnter);
+            this.lblSignIn.MouseLeave += new System.EventHandler(this.lblSignIn_MouseLeave);
             // 
             // txtIdNo
             // 

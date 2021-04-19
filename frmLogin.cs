@@ -74,5 +74,25 @@ namespace VTDI_CSS
             this.Hide();
             register.Show();
         }
+
+        private void lblCreateAccount_MouseEnter(object sender, EventArgs e)
+        {
+            lblCreateAccount.ForeColor = Color.Blue;
+        }
+
+        private void lblCreateAccount_MouseLeave(object sender, EventArgs e)
+        {
+            lblCreateAccount.ForeColor = Color.FromArgb(78, 115, 223);
+        }
+
+        private void lblForgotPassword_MouseEnter(object sender, EventArgs e)
+        {
+            lblForgotPassword.ForeColor = Color.Blue;
+        }
+
+        private void lblForgotPassword_MouseLeave(object sender, EventArgs e)
+        {
+            lblForgotPassword.ForeColor = Color.FromArgb(78, 115, 223);
+        }
     }
 }

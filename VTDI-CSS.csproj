@@ -80,6 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminProfile.designer.cs">
+      <DependentUpon>frmAdminProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +140,6 @@
     <Compile Include="frmAdminDashboard.designer.cs">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdminProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdminProfile.designer.cs">
-      <DependentUpon>frmAdminProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +154,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminProfile.resx">
+      <DependentUpon>frmAdminProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentDashboard.resx">
       <DependentUpon>frmStudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminProfile.resx">
-      <DependentUpon>frmAdminProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
@@ -221,6 +221,7 @@
     <None Include="Resources\attachment.png" />
     <None Include="Resources\about.png" />
     <None Include="Resources\chat.png" />
+    <None Include="Resources\attachment1.png" />
     <Content Include="Resources\clock.png" />
     <Content Include="Resources\dashboard.png" />
     <None Include="Resources\home2.png" />
@@ -244,6 +245,9 @@
     <None Include="Resources\profile1.png" />
     <None Include="Resources\send.png" />
     <None Include="Resources\reply.png" />
+    <None Include="Resources\return.png" />
+    <None Include="Resources\send1.png" />
+    <None Include="Resources\profile2.png" />
     <Content Include="Resources\sticky-notes.png" />
     <None Include="Resources\up-arrow.png" />
     <None Include="Resources\tick.png" />

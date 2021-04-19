@@ -74,5 +74,15 @@ namespace VTDI_CSS
             this.Hide();
             login.Show();
         }
+
+        private void lblSignIn_MouseEnter(object sender, EventArgs e)
+        {
+            lblSignIn.ForeColor = Color.Blue;
+        }
+
+        private void lblSignIn_MouseLeave(object sender, EventArgs e)
+        {
+            lblSignIn.ForeColor = Color.FromArgb(78, 115, 223);
+        }
     }
 }

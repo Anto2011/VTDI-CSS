@@ -1035,6 +1035,7 @@ namespace VTDI_CSS
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStudentDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDashboard_MouseDown);

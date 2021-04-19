@@ -122,6 +122,8 @@ namespace VTDI_CSS
             this.lblForgotPassword.Size = new System.Drawing.Size(137, 21);
             this.lblForgotPassword.TabIndex = 4;
             this.lblForgotPassword.Text = "Forgot Password?";
+            this.lblForgotPassword.MouseEnter += new System.EventHandler(this.lblForgotPassword_MouseEnter);
+            this.lblForgotPassword.MouseLeave += new System.EventHandler(this.lblForgotPassword_MouseLeave);
             // 
             // lblCreateAccount
             // 
@@ -135,6 +137,8 @@ namespace VTDI_CSS
             this.lblCreateAccount.TabIndex = 5;
             this.lblCreateAccount.Text = "Don\'t Have An Account?";
             this.lblCreateAccount.Click += new System.EventHandler(this.lblCreateAccount_Click);
+            this.lblCreateAccount.MouseEnter += new System.EventHandler(this.lblCreateAccount_MouseEnter);
+            this.lblCreateAccount.MouseLeave += new System.EventHandler(this.lblCreateAccount_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -217,6 +221,7 @@ namespace VTDI_CSS
             this.BtnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
             this.BtnLogin.BorderRadius = 16;
             this.BtnLogin.ButtonText = "Login ";
+            this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLogin.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.BtnLogin.Font_Size = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.BtnLogin.ForeColors = System.Drawing.SystemColors.ControlLightLight;

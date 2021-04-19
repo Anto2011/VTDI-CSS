@@ -311,6 +311,8 @@
             this.btnMinimize.Text = "-";
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.MouseEnter += new System.EventHandler(this.btnMinimize_MouseEnter);
+            this.btnMinimize.MouseLeave += new System.EventHandler(this.btnMinimize_MouseLeave);
             // 
             // pictureBox2
             // 
@@ -625,6 +627,8 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // btnSettings
             // 
@@ -639,6 +643,8 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.MouseEnter += new System.EventHandler(this.btnSettings_MouseEnter);
+            this.btnSettings.MouseLeave += new System.EventHandler(this.btnSettings_MouseLeave);
             // 
             // btnLogout
             // 
@@ -653,6 +659,8 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.MouseEnter += new System.EventHandler(this.btnLogout_MouseEnter);
+            this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
             // 
             // btnActivityLog
             // 
@@ -667,6 +675,8 @@
             this.btnActivityLog.Text = "Activity Log";
             this.btnActivityLog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActivityLog.UseVisualStyleBackColor = true;
+            this.btnActivityLog.MouseEnter += new System.EventHandler(this.btnActivityLog_MouseEnter);
+            this.btnActivityLog.MouseLeave += new System.EventHandler(this.btnActivityLog_MouseLeave);
             // 
             // pnlShadow7
             // 
@@ -700,7 +710,7 @@
             this.txtSearch.OnFocusFontColor = System.Drawing.Color.Empty;
             this.txtSearch.ReadOnly = false;
             this.txtSearch.Size = new System.Drawing.Size(334, 40);
-            this.txtSearch.TabIndex = 69;
+            this.txtSearch.TabIndex = 1;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSearch.TextName = "Enter Subject...";
             // 

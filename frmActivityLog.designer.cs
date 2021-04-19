@@ -679,6 +679,7 @@
             this.btnSubmit.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnSubmit.BorderRadius = 12;
             this.btnSubmit.ButtonText = "Submit";
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Font_Size = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColors = System.Drawing.SystemColors.Highlight;
@@ -716,6 +717,7 @@
             this.Controls.Add(this.btnSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmActivityLog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmActivityLog";
             this.Load += new System.EventHandler(this.frmActivityLog_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmActivityLog_MouseDown);
