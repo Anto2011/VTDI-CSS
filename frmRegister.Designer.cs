@@ -29,346 +29,402 @@ namespace VTDI_CSS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
-            this.Logopicbox = new System.Windows.Forms.PictureBox();
             this.Headerpanel = new System.Windows.Forms.Panel();
-            this.minimizelbl = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
-            this.Registerbtn = new JThinButton.JThinButton();
-            this.Facebookregisterbtn = new JThinButton.JThinButton();
-            this.Googlelregisterbtn = new JThinButton.JThinButton();
-            this.returntologinlbl = new System.Windows.Forms.Label();
-            this.Lastnametxt = new JMetroTextBox.JMetroTextBox();
-            this.jMetroTextBox2 = new JMetroTextBox.JMetroTextBox();
-            this.telephoneroundedtxtbox = new JMetroTextBox.JMetroTextBox();
-            this.Emailtxt = new JMetroTextBox.JMetroTextBox();
-            this.passwordtxt = new JMetroTextBox.JMetroTextBox();
-            this.confirmpasswordtxt = new JMetroTextBox.JMetroTextBox();
-            this.telephonemaskedTxtbox = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Logopicbox)).BeginInit();
+            this.btnRegister = new JThinButton.JThinButton();
+            this.lblSignIn = new System.Windows.Forms.Label();
+            this.txtIdNo = new JMaterialTextbox.JMaterialTextbox();
+            this.txtLastName = new JMaterialTextbox.JMaterialTextbox();
+            this.txtEmail = new JMaterialTextbox.JMaterialTextbox();
+            this.txtUsername = new JMaterialTextbox.JMaterialTextbox();
+            this.txtPassword = new JMaterialTextbox.JMaterialTextbox();
+            this.txtConfirmPassword = new JMaterialTextbox.JMaterialTextbox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtFirstName = new JMaterialTextbox.JMaterialTextbox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Logopicbox = new System.Windows.Forms.PictureBox();
             this.Headerpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logopicbox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Logopicbox
-            // 
-            this.Logopicbox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Logopicbox.Image = ((System.Drawing.Image)(resources.GetObject("Logopicbox.Image")));
-            this.Logopicbox.Location = new System.Drawing.Point(0, 0);
-            this.Logopicbox.Name = "Logopicbox";
-            this.Logopicbox.Size = new System.Drawing.Size(373, 640);
-            this.Logopicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Logopicbox.TabIndex = 0;
-            this.Logopicbox.TabStop = false;
             // 
             // Headerpanel
             // 
             this.Headerpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
-            this.Headerpanel.Controls.Add(this.minimizelbl);
-            this.Headerpanel.Controls.Add(this.label2);
+            this.Headerpanel.Controls.Add(this.btnExit);
+            this.Headerpanel.Controls.Add(this.btnMinimize);
             this.Headerpanel.Controls.Add(this.label1);
-            this.Headerpanel.Location = new System.Drawing.Point(373, 0);
+            this.Headerpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Headerpanel.Location = new System.Drawing.Point(315, 0);
             this.Headerpanel.Name = "Headerpanel";
-            this.Headerpanel.Size = new System.Drawing.Size(523, 122);
+            this.Headerpanel.Size = new System.Drawing.Size(582, 81);
             this.Headerpanel.TabIndex = 1;
             // 
-            // minimizelbl
+            // btnExit
             // 
-            this.minimizelbl.AutoSize = true;
-            this.minimizelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimizelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.minimizelbl.Location = new System.Drawing.Point(482, 0);
-            this.minimizelbl.Name = "minimizelbl";
-            this.minimizelbl.Size = new System.Drawing.Size(19, 25);
-            this.minimizelbl.TabIndex = 2;
-            this.minimizelbl.Text = "-";
-            this.minimizelbl.Click += new System.EventHandler(this.minimizelbl_Click);
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(552, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(30, 39);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.TabStop = false;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label2
+            // btnMinimize
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(507, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "X";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Location = new System.Drawing.Point(516, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(30, 39);
+            this.btnMinimize.TabIndex = 10;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Text = "-";
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(138, 74);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(139, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 29);
+            this.label1.Size = new System.Drawing.Size(319, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Create an account !!";
+            this.label1.Text = "CREATE AN ACCOUNT";
             // 
-            // jDragControl1
+            // btnRegister
             // 
-            this.jDragControl1.GetForm = this;
-            //this.jDragControl1.TargetControl = null;
+            this.btnRegister.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegister.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
+            this.btnRegister.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
+            this.btnRegister.BorderRadius = 19;
+            this.btnRegister.ButtonText = "Register";
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Font_Size = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColors = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRegister.HoverBackground = System.Drawing.Color.White;
+            this.btnRegister.HoverBorder = System.Drawing.Color.Empty;
+            this.btnRegister.HoverFontColor = System.Drawing.SystemColors.Highlight;
+            this.btnRegister.LineThickness = 2;
+            this.btnRegister.Location = new System.Drawing.Point(362, 507);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(490, 41);
+            this.btnRegister.TabIndex = 8;
             // 
-            // Registerbtn
+            // lblSignIn
             // 
-            this.Registerbtn.BackColor = System.Drawing.Color.Transparent;
-            this.Registerbtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
-            this.Registerbtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
-            this.Registerbtn.BorderRadius = 13;
-            this.Registerbtn.ButtonText = "Register";
-            this.Registerbtn.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registerbtn.Font_Size = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registerbtn.ForeColors = System.Drawing.SystemColors.ControlLightLight;
-            this.Registerbtn.HoverBackground = System.Drawing.Color.White;
-            this.Registerbtn.HoverBorder = System.Drawing.Color.Empty;
-            this.Registerbtn.HoverFontColor = System.Drawing.SystemColors.Highlight;
-            this.Registerbtn.LineThickness = 2;
-            this.Registerbtn.Location = new System.Drawing.Point(420, 403);
-            this.Registerbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Registerbtn.Name = "Registerbtn";
-            this.Registerbtn.Size = new System.Drawing.Size(441, 35);
-            this.Registerbtn.TabIndex = 4;
+            this.lblSignIn.AutoSize = true;
+            this.lblSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
+            this.lblSignIn.Location = new System.Drawing.Point(511, 563);
+            this.lblSignIn.Name = "lblSignIn";
+            this.lblSignIn.Size = new System.Drawing.Size(200, 21);
+            this.lblSignIn.TabIndex = 9;
+            this.lblSignIn.Text = "Already Have An Account?";
+            this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
+            this.lblSignIn.MouseEnter += new System.EventHandler(this.lblSignIn_MouseEnter);
+            this.lblSignIn.MouseLeave += new System.EventHandler(this.lblSignIn_MouseLeave);
             // 
-            // Facebookregisterbtn
+            // txtIdNo
             // 
-            this.Facebookregisterbtn.BackColor = System.Drawing.Color.Transparent;
-            this.Facebookregisterbtn.BackgroundColor = System.Drawing.SystemColors.HotTrack;
-            this.Facebookregisterbtn.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.Facebookregisterbtn.BorderRadius = 13;
-            this.Facebookregisterbtn.ButtonText = "Register with Facebook";
-            this.Facebookregisterbtn.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Facebookregisterbtn.Font_Size = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Facebookregisterbtn.ForeColors = System.Drawing.SystemColors.ControlLightLight;
-            this.Facebookregisterbtn.HoverBackground = System.Drawing.Color.White;
-            this.Facebookregisterbtn.HoverBorder = System.Drawing.Color.Empty;
-            this.Facebookregisterbtn.HoverFontColor = System.Drawing.SystemColors.Highlight;
-            this.Facebookregisterbtn.LineThickness = 1;
-            this.Facebookregisterbtn.Location = new System.Drawing.Point(420, 522);
-            this.Facebookregisterbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Facebookregisterbtn.Name = "Facebookregisterbtn";
-            this.Facebookregisterbtn.Size = new System.Drawing.Size(441, 38);
-            this.Facebookregisterbtn.TabIndex = 9;
+            this.txtIdNo.BackColor = System.Drawing.Color.Transparent;
+            this.txtIdNo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdNo.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdNo.ForeColors = System.Drawing.Color.DimGray;
+            this.txtIdNo.HintText = null;
+            this.txtIdNo.IsPassword = false;
+            this.txtIdNo.LineBackColor = System.Drawing.Color.DimGray;
+            this.txtIdNo.LineThickness = 2;
+            this.txtIdNo.Location = new System.Drawing.Point(626, 341);
+            this.txtIdNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdNo.MaxLength = 32767;
+            this.txtIdNo.Name = "txtIdNo";
+            this.txtIdNo.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtIdNo.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtIdNo.ReadOnly = false;
+            this.txtIdNo.Size = new System.Drawing.Size(250, 30);
+            this.txtIdNo.TabIndex = 5;
+            this.txtIdNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtIdNo.TextName = "ID Number...";
             // 
-            // Googlelregisterbtn
+            // txtLastName
             // 
-            this.Googlelregisterbtn.BackColor = System.Drawing.Color.Transparent;
-            this.Googlelregisterbtn.BackgroundColor = System.Drawing.Color.Firebrick;
-            this.Googlelregisterbtn.BorderColor = System.Drawing.Color.Firebrick;
-            this.Googlelregisterbtn.BorderRadius = 13;
-            this.Googlelregisterbtn.ButtonText = "Register with Google";
-            this.Googlelregisterbtn.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Googlelregisterbtn.Font_Size = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Googlelregisterbtn.ForeColors = System.Drawing.SystemColors.ControlLightLight;
-            this.Googlelregisterbtn.HoverBackground = System.Drawing.Color.White;
-            this.Googlelregisterbtn.HoverBorder = System.Drawing.Color.Empty;
-            this.Googlelregisterbtn.HoverFontColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Googlelregisterbtn.LineThickness = 2;
-            this.Googlelregisterbtn.Location = new System.Drawing.Point(420, 476);
-            this.Googlelregisterbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Googlelregisterbtn.Name = "Googlelregisterbtn";
-            this.Googlelregisterbtn.Size = new System.Drawing.Size(441, 38);
-            this.Googlelregisterbtn.TabIndex = 10;
+            this.txtLastName.BackColor = System.Drawing.Color.Transparent;
+            this.txtLastName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.ForeColors = System.Drawing.Color.DimGray;
+            this.txtLastName.HintText = null;
+            this.txtLastName.IsPassword = false;
+            this.txtLastName.LineBackColor = System.Drawing.Color.DimGray;
+            this.txtLastName.LineThickness = 2;
+            this.txtLastName.Location = new System.Drawing.Point(626, 147);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.MaxLength = 32767;
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtLastName.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtLastName.ReadOnly = false;
+            this.txtLastName.Size = new System.Drawing.Size(250, 30);
+            this.txtLastName.TabIndex = 2;
+            this.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtLastName.TextName = "Last Name...";
             // 
-            // returntologinlbl
+            // txtEmail
             // 
-            this.returntologinlbl.AutoSize = true;
-            this.returntologinlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returntologinlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
-            this.returntologinlbl.Location = new System.Drawing.Point(590, 584);
-            this.returntologinlbl.Name = "returntologinlbl";
-            this.returntologinlbl.Size = new System.Drawing.Size(113, 18);
-            this.returntologinlbl.TabIndex = 12;
-            this.returntologinlbl.Text = "Create Account!";
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColors = System.Drawing.Color.DimGray;
+            this.txtEmail.HintText = null;
+            this.txtEmail.IsPassword = false;
+            this.txtEmail.LineBackColor = System.Drawing.Color.DimGray;
+            this.txtEmail.LineThickness = 2;
+            this.txtEmail.Location = new System.Drawing.Point(337, 243);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtEmail.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtEmail.ReadOnly = false;
+            this.txtEmail.Size = new System.Drawing.Size(539, 32);
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmail.TextName = "Email...";
             // 
-            // Lastnametxt
+            // txtUsername
             // 
-            this.Lastnametxt.BackColor = System.Drawing.Color.Transparent;
-            this.Lastnametxt.BorderColor = System.Drawing.Color.Empty;
-            this.Lastnametxt.BorderRadius = 13;
-            this.Lastnametxt.FillColor = System.Drawing.SystemColors.Window;
-            this.Lastnametxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Lastnametxt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Lastnametxt.ForeColors = System.Drawing.Color.Black;
-            this.Lastnametxt.IsPassword = false;
-            this.Lastnametxt.LineThickness = 2;
-            this.Lastnametxt.Location = new System.Drawing.Point(420, 147);
-            this.Lastnametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Lastnametxt.MaxLength = 32767;
-            this.Lastnametxt.MouseOnHover = System.Drawing.Color.Empty;
-            this.Lastnametxt.Name = "Lastnametxt";
-            this.Lastnametxt.OnCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Lastnametxt.OnFocusColor = System.Drawing.Color.Empty;
-            this.Lastnametxt.OnFocusFontColor = System.Drawing.Color.Empty;
-            this.Lastnametxt.ReadOnly = false;
-            this.Lastnametxt.Size = new System.Drawing.Size(180, 39);
-            this.Lastnametxt.TabIndex = 13;
-            this.Lastnametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Lastnametxt.TextName = "First name";
+            this.txtUsername.BackColor = System.Drawing.Color.Transparent;
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColors = System.Drawing.Color.DimGray;
+            this.txtUsername.HintText = null;
+            this.txtUsername.IsPassword = false;
+            this.txtUsername.LineBackColor = System.Drawing.Color.DimGray;
+            this.txtUsername.LineThickness = 2;
+            this.txtUsername.Location = new System.Drawing.Point(340, 341);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtUsername.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtUsername.ReadOnly = false;
+            this.txtUsername.Size = new System.Drawing.Size(250, 30);
+            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.TextName = "Username...";
             // 
-            // jMetroTextBox2
+            // txtPassword
             // 
-            this.jMetroTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.jMetroTextBox2.BorderColor = System.Drawing.Color.Empty;
-            this.jMetroTextBox2.BorderRadius = 13;
-            this.jMetroTextBox2.FillColor = System.Drawing.SystemColors.Window;
-            this.jMetroTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMetroTextBox2.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMetroTextBox2.ForeColors = System.Drawing.Color.Black;
-            this.jMetroTextBox2.IsPassword = false;
-            this.jMetroTextBox2.LineThickness = 2;
-            this.jMetroTextBox2.Location = new System.Drawing.Point(641, 147);
-            this.jMetroTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jMetroTextBox2.MaxLength = 32767;
-            this.jMetroTextBox2.MouseOnHover = System.Drawing.Color.Empty;
-            this.jMetroTextBox2.Name = "jMetroTextBox2";
-            this.jMetroTextBox2.OnCursor = System.Windows.Forms.Cursors.IBeam;
-            this.jMetroTextBox2.OnFocusColor = System.Drawing.Color.Empty;
-            this.jMetroTextBox2.OnFocusFontColor = System.Drawing.Color.Empty;
-            this.jMetroTextBox2.ReadOnly = false;
-            this.jMetroTextBox2.Size = new System.Drawing.Size(180, 39);
-            this.jMetroTextBox2.TabIndex = 14;
-            this.jMetroTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jMetroTextBox2.TextName = "Last Name";
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColors = System.Drawing.Color.DimGray;
+            this.txtPassword.HintText = null;
+            this.txtPassword.IsPassword = true;
+            this.txtPassword.LineBackColor = System.Drawing.Color.DimGray;
+            this.txtPassword.LineThickness = 2;
+            this.txtPassword.Location = new System.Drawing.Point(340, 437);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.MaxLength = 32767;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtPassword.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtPassword.ReadOnly = false;
+            this.txtPassword.Size = new System.Drawing.Size(250, 30);
+            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.TextName = "Password...";
             // 
-            // telephoneroundedtxtbox
+            // txtConfirmPassword
             // 
-            this.telephoneroundedtxtbox.BackColor = System.Drawing.Color.Transparent;
-            this.telephoneroundedtxtbox.BorderColor = System.Drawing.Color.Empty;
-            this.telephoneroundedtxtbox.BorderRadius = 13;
-            this.telephoneroundedtxtbox.FillColor = System.Drawing.SystemColors.Window;
-            this.telephoneroundedtxtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.telephoneroundedtxtbox.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.telephoneroundedtxtbox.ForeColors = System.Drawing.Color.Black;
-            this.telephoneroundedtxtbox.IsPassword = false;
-            this.telephoneroundedtxtbox.LineThickness = 2;
-            this.telephoneroundedtxtbox.Location = new System.Drawing.Point(420, 266);
-            this.telephoneroundedtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.telephoneroundedtxtbox.MaxLength = 32767;
-            this.telephoneroundedtxtbox.MouseOnHover = System.Drawing.Color.Empty;
-            this.telephoneroundedtxtbox.Name = "telephoneroundedtxtbox";
-            this.telephoneroundedtxtbox.OnCursor = System.Windows.Forms.Cursors.IBeam;
-            this.telephoneroundedtxtbox.OnFocusColor = System.Drawing.Color.Empty;
-            this.telephoneroundedtxtbox.OnFocusFontColor = System.Drawing.Color.Empty;
-            this.telephoneroundedtxtbox.ReadOnly = false;
-            this.telephoneroundedtxtbox.Size = new System.Drawing.Size(401, 42);
-            this.telephoneroundedtxtbox.TabIndex = 15;
-            this.telephoneroundedtxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.telephoneroundedtxtbox.TextName = "Telephone ";
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.ForeColors = System.Drawing.Color.DimGray;
+            this.txtConfirmPassword.HintText = null;
+            this.txtConfirmPassword.IsPassword = true;
+            this.txtConfirmPassword.LineBackColor = System.Drawing.Color.DimGray;
+            this.txtConfirmPassword.LineThickness = 2;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(626, 437);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConfirmPassword.MaxLength = 32767;
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtConfirmPassword.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtConfirmPassword.ReadOnly = false;
+            this.txtConfirmPassword.Size = new System.Drawing.Size(250, 30);
+            this.txtConfirmPassword.TabIndex = 7;
+            this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtConfirmPassword.TextName = "Confirm Password...";
             // 
-            // Emailtxt
+            // label2
             // 
-            this.Emailtxt.BackColor = System.Drawing.Color.Transparent;
-            this.Emailtxt.BorderColor = System.Drawing.Color.Empty;
-            this.Emailtxt.BorderRadius = 13;
-            this.Emailtxt.FillColor = System.Drawing.SystemColors.Window;
-            this.Emailtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Emailtxt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Emailtxt.ForeColors = System.Drawing.Color.Black;
-            this.Emailtxt.IsPassword = false;
-            this.Emailtxt.LineThickness = 2;
-            this.Emailtxt.Location = new System.Drawing.Point(420, 204);
-            this.Emailtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Emailtxt.MaxLength = 32767;
-            this.Emailtxt.MouseOnHover = System.Drawing.Color.Empty;
-            this.Emailtxt.Name = "Emailtxt";
-            this.Emailtxt.OnCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Emailtxt.OnFocusColor = System.Drawing.Color.Empty;
-            this.Emailtxt.OnFocusFontColor = System.Drawing.Color.Empty;
-            this.Emailtxt.ReadOnly = false;
-            this.Emailtxt.Size = new System.Drawing.Size(401, 44);
-            this.Emailtxt.TabIndex = 16;
-            this.Emailtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Emailtxt.TextName = "Email Address";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(334, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "First Name:";
             // 
-            // passwordtxt
+            // label3
             // 
-            this.passwordtxt.BackColor = System.Drawing.Color.Transparent;
-            this.passwordtxt.BorderColor = System.Drawing.Color.Empty;
-            this.passwordtxt.BorderRadius = 13;
-            this.passwordtxt.FillColor = System.Drawing.SystemColors.Window;
-            this.passwordtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.passwordtxt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.passwordtxt.ForeColors = System.Drawing.Color.Black;
-            this.passwordtxt.IsPassword = false;
-            this.passwordtxt.LineThickness = 2;
-            this.passwordtxt.Location = new System.Drawing.Point(420, 336);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.passwordtxt.MaxLength = 32767;
-            this.passwordtxt.MouseOnHover = System.Drawing.Color.Empty;
-            this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.OnCursor = System.Windows.Forms.Cursors.IBeam;
-            this.passwordtxt.OnFocusColor = System.Drawing.Color.Empty;
-            this.passwordtxt.OnFocusFontColor = System.Drawing.Color.Empty;
-            this.passwordtxt.ReadOnly = false;
-            this.passwordtxt.Size = new System.Drawing.Size(180, 41);
-            this.passwordtxt.TabIndex = 17;
-            this.passwordtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.passwordtxt.TextName = "Password";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(629, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 17);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Last Name:";
             // 
-            // confirmpasswordtxt
+            // label4
             // 
-            this.confirmpasswordtxt.BackColor = System.Drawing.Color.Transparent;
-            this.confirmpasswordtxt.BorderColor = System.Drawing.Color.Empty;
-            this.confirmpasswordtxt.BorderRadius = 13;
-            this.confirmpasswordtxt.FillColor = System.Drawing.SystemColors.Window;
-            this.confirmpasswordtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.confirmpasswordtxt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.confirmpasswordtxt.ForeColors = System.Drawing.Color.Black;
-            this.confirmpasswordtxt.IsPassword = false;
-            this.confirmpasswordtxt.LineThickness = 2;
-            this.confirmpasswordtxt.Location = new System.Drawing.Point(658, 336);
-            this.confirmpasswordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.confirmpasswordtxt.MaxLength = 32767;
-            this.confirmpasswordtxt.MouseOnHover = System.Drawing.Color.Empty;
-            this.confirmpasswordtxt.Name = "confirmpasswordtxt";
-            this.confirmpasswordtxt.OnCursor = System.Windows.Forms.Cursors.IBeam;
-            this.confirmpasswordtxt.OnFocusColor = System.Drawing.Color.Empty;
-            this.confirmpasswordtxt.OnFocusFontColor = System.Drawing.Color.Empty;
-            this.confirmpasswordtxt.ReadOnly = false;
-            this.confirmpasswordtxt.Size = new System.Drawing.Size(163, 41);
-            this.confirmpasswordtxt.TabIndex = 18;
-            this.confirmpasswordtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.confirmpasswordtxt.TextName = "Confirm Password";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(334, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Email Address:";
             // 
-            // telephonemaskedTxtbox
+            // label5
             // 
-            this.telephonemaskedTxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.telephonemaskedTxtbox.Location = new System.Drawing.Point(530, 284);
-            this.telephonemaskedTxtbox.Mask = "(999) 000-0000";
-            this.telephonemaskedTxtbox.Name = "telephonemaskedTxtbox";
-            this.telephonemaskedTxtbox.Size = new System.Drawing.Size(149, 13);
-            this.telephonemaskedTxtbox.TabIndex = 19;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(629, 306);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 17);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "ID Number:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(334, 308);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Username:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(334, 402);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Password:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(629, 402);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 17);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Confirm Password:";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.BackColor = System.Drawing.Color.Transparent;
+            this.txtFirstName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.ForeColors = System.Drawing.Color.DimGray;
+            this.txtFirstName.HintText = null;
+            this.txtFirstName.IsPassword = false;
+            this.txtFirstName.LineBackColor = System.Drawing.Color.DimGray;
+            this.txtFirstName.LineThickness = 2;
+            this.txtFirstName.Location = new System.Drawing.Point(340, 147);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.MaxLength = 32767;
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtFirstName.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtFirstName.ReadOnly = false;
+            this.txtFirstName.Size = new System.Drawing.Size(250, 30);
+            this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtFirstName.TextName = "First Name...";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VTDI_CSS.Properties.Resources.heart;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(315, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Logopicbox
+            // 
+            this.Logopicbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Logopicbox.Image = global::VTDI_CSS.Properties.Resources.vtdi;
+            this.Logopicbox.Location = new System.Drawing.Point(0, 0);
+            this.Logopicbox.Name = "Logopicbox";
+            this.Logopicbox.Size = new System.Drawing.Size(315, 590);
+            this.Logopicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logopicbox.TabIndex = 0;
+            this.Logopicbox.TabStop = false;
             // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(897, 640);
-            this.Controls.Add(this.telephonemaskedTxtbox);
-            this.Controls.Add(this.confirmpasswordtxt);
-            this.Controls.Add(this.passwordtxt);
-            this.Controls.Add(this.Emailtxt);
-            this.Controls.Add(this.telephoneroundedtxtbox);
-            this.Controls.Add(this.jMetroTextBox2);
-            this.Controls.Add(this.Lastnametxt);
-            this.Controls.Add(this.returntologinlbl);
-            this.Controls.Add(this.Googlelregisterbtn);
-            this.Controls.Add(this.Facebookregisterbtn);
-            this.Controls.Add(this.Registerbtn);
+            this.ClientSize = new System.Drawing.Size(897, 590);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtConfirmPassword);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtIdNo);
+            this.Controls.Add(this.lblSignIn);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.Headerpanel);
             this.Controls.Add(this.Logopicbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loginfrm";
-            ((System.ComponentModel.ISupportInitialize)(this.Logopicbox)).EndInit();
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmRegister_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmRegister_MouseMove);
             this.Headerpanel.ResumeLayout(false);
             this.Headerpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logopicbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,20 +434,25 @@ namespace VTDI_CSS
 
         private System.Windows.Forms.PictureBox Logopicbox;
         private System.Windows.Forms.Panel Headerpanel;
-        private System.Windows.Forms.Label minimizelbl;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private JDragControl.JDragControl jDragControl1;
-        private JThinButton.JThinButton Googlelregisterbtn;
-        private JThinButton.JThinButton Facebookregisterbtn;
-        private JThinButton.JThinButton Registerbtn;
-        private System.Windows.Forms.Label returntologinlbl;
-        private JMetroTextBox.JMetroTextBox Lastnametxt;
-        private System.Windows.Forms.MaskedTextBox telephonemaskedTxtbox;
-        private JMetroTextBox.JMetroTextBox confirmpasswordtxt;
-        private JMetroTextBox.JMetroTextBox passwordtxt;
-        private JMetroTextBox.JMetroTextBox Emailtxt;
-        private JMetroTextBox.JMetroTextBox telephoneroundedtxtbox;
-        private JMetroTextBox.JMetroTextBox jMetroTextBox2;
+        private JThinButton.JThinButton btnRegister;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Label lblSignIn;
+        private JMaterialTextbox.JMaterialTextbox txtIdNo;
+        private JMaterialTextbox.JMaterialTextbox txtLastName;
+        private JMaterialTextbox.JMaterialTextbox txtEmail;
+        private JMaterialTextbox.JMaterialTextbox txtUsername;
+        private JMaterialTextbox.JMaterialTextbox txtPassword;
+        private JMaterialTextbox.JMaterialTextbox txtConfirmPassword;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private JMaterialTextbox.JMaterialTextbox txtFirstName;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -11,11 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Web;
-//using Newtonsoft.Json;
 
 namespace VTDI_CSS
 {
-    public partial class frmActivityLog : Form
+    public partial class frmViewTickets : Form
     {
 
         Point lastPoint;
@@ -37,22 +36,30 @@ namespace VTDI_CSS
             int nHeightEllipse // height of ellipse
         );
 
-        public frmActivityLog()
+        public frmViewTickets()
         {
             InitializeComponent();
-            tmrDateTime.Start();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            tmrDateTime.Start();
         }
 
-        protected override CreateParams CreateParams {
-            get {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
                 CreateParams cp = base.CreateParams;
                 cp.ClassStyle |= dropShadow;
                 return cp;
             }
         }
 
-        private void frmActivityLog_Load(object sender, EventArgs e)
+        private void tmrDateTime_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            this.lblDateTime.Text = dateTime.ToString();
+        }
+
+        private void frmTickets_Load(object sender, EventArgs e)
         {
             this.btnDashboard.Image = (Image)(new Bitmap(homeIcon, new Size(40, 40)));
             this.btnTickets.Image = (Image)(new Bitmap(ticketIcon, new Size(40, 30)));
@@ -65,33 +72,18 @@ namespace VTDI_CSS
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void tmrDateTime_Tick(object sender, EventArgs e)
-        {
-            DateTime dateTime = DateTime.Now;
-            this.lblDateTime.Text = dateTime.ToString();
-        }
-
-        private void frmActivityLog_MouseDown(object sender, MouseEventArgs e)
+        private void frmTickets_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void frmActivityLog_MouseMove(object sender, MouseEventArgs e)
+        private void frmTickets_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) {
+            if (e.Button == MouseButtons.Left)
+            {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
-        }
-
-        private void btnMinimize_MouseEnter(object sender, EventArgs e)
-        {
-            btnMinimize.ForeColor = Color.Black;
-        }
-
-        private void btnMinimize_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimize.ForeColor = Color.DimGray;
         }
 
         private void btnDashboard_MouseEnter(object sender, EventArgs e)
@@ -134,6 +126,16 @@ namespace VTDI_CSS
             btnExit.ForeColor = Color.Gainsboro;
         }
 
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.ForeColor = Color.Black;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.ForeColor = Color.DimGray;
+        }
+
         private void pnlShadow7_Paint(object sender, PaintEventArgs e)
         {
             pnlShadow7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 180, 170, 20, 20));
@@ -174,44 +176,90 @@ namespace VTDI_CSS
             pnlTicketsCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
         }
 
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
+        private void lblBold_Click(object sender, EventArgs e)
         {
-            btnProfile.ForeColor = Color.Black;
+            int selstart = rtbReply.SelectionStart;
+            int sellength = rtbReply.SelectionLength;
+
+            if (!rtbReply.SelectionFont.Bold)
+            {
+                rtbReply.SelectionFont = new Font(rtbReply.Font, FontStyle.Bold);
+                rtbReply.SelectionStart = rtbReply.SelectionStart + rtbReply.SelectionLength;
+                rtbReply.SelectionLength = 0;
+                rtbReply.SelectionFont = rtbReply.Font;
+                rtbReply.Select(selstart, sellength);
+            }
+            else
+            {
+                rtbReply.SelectionFont = new Font(rtbReply.Font, FontStyle.Regular);
+                rtbReply.SelectionStart = rtbReply.SelectionStart + rtbReply.SelectionLength;
+                rtbReply.SelectionLength = 0;
+                rtbReply.SelectionFont = rtbReply.Font;
+                rtbReply.Select(selstart, sellength);
+            }
         }
 
-        private void btnProfile_MouseLeave(object sender, EventArgs e)
+        private void lblItalic_Click(object sender, EventArgs e)
         {
-            btnProfile.ForeColor = Color.DimGray;
+            int selstart = rtbReply.SelectionStart;
+            int sellength = rtbReply.SelectionLength;
+
+            if (!rtbReply.SelectionFont.Italic)
+            {
+                rtbReply.SelectionFont = new Font(rtbReply.Font, FontStyle.Italic);
+                rtbReply.SelectionStart = rtbReply.SelectionStart + rtbReply.SelectionLength;
+                rtbReply.SelectionLength = 0;
+                rtbReply.SelectionFont = rtbReply.Font;
+                rtbReply.Select(selstart, sellength);
+            }
+            else
+            {
+                rtbReply.SelectionFont = new Font(rtbReply.Font, FontStyle.Regular);
+                rtbReply.SelectionStart = rtbReply.SelectionStart + rtbReply.SelectionLength;
+                rtbReply.SelectionLength = 0;
+                rtbReply.SelectionFont = rtbReply.Font;
+                rtbReply.Select(selstart, sellength);
+            }
         }
 
-        private void btnSettings_MouseEnter(object sender, EventArgs e)
+        private void lblUnderline_Click(object sender, EventArgs e)
         {
-            btnSettings.ForeColor = Color.Black;
+            int selstart = rtbReply.SelectionStart;
+            int sellength = rtbReply.SelectionLength;
+
+            if (!rtbReply.SelectionFont.Underline)
+            {
+                rtbReply.SelectionFont = new Font(rtbReply.Font, FontStyle.Underline);
+                rtbReply.SelectionStart = rtbReply.SelectionStart + rtbReply.SelectionLength;
+                rtbReply.SelectionLength = 0;
+                rtbReply.SelectionFont = rtbReply.Font;
+                rtbReply.Select(selstart, sellength);
+            }
+            else
+            {
+                rtbReply.SelectionFont = new Font(rtbReply.Font, FontStyle.Regular);
+                rtbReply.SelectionStart = rtbReply.SelectionStart + rtbReply.SelectionLength;
+                rtbReply.SelectionLength = 0;
+                rtbReply.SelectionFont = rtbReply.Font;
+                rtbReply.Select(selstart, sellength);
+            }
         }
 
-        private void btnSettings_MouseLeave(object sender, EventArgs e)
+        private void pbxAttachment_Click(object sender, EventArgs e)
         {
-            btnSettings.ForeColor = Color.DimGray;
+            DialogResult result = ofdUploadFile.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                //Do whatever you want
+                //openFileDialog1.FileName .....
+            }
         }
 
-        private void btnActivityLog_MouseEnter(object sender, EventArgs e)
+        private void pbxReply_Click(object sender, EventArgs e)
         {
-            btnActivityLog.ForeColor = Color.Black;
-        }
-
-        private void btnActivityLog_MouseLeave(object sender, EventArgs e)
-        {
-            btnActivityLog.ForeColor = Color.DimGray;
-        }
-
-        private void btnLogout_MouseEnter(object sender, EventArgs e)
-        {
-            btnLogout.ForeColor = Color.Black;
-        }
-
-        private void btnLogout_MouseLeave(object sender, EventArgs e)
-        {
-            btnLogout.ForeColor = Color.DimGray;
+            lblReply.Visible = true;
+            rtbReply.Visible = true;
+            rtbMessage.Size = new Size(1029, 225);
         }
 
         private void btnUserProfile_Click(object sender, EventArgs e)

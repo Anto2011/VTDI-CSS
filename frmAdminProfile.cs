@@ -131,12 +131,11 @@ namespace VTDI_CSS
 
         private void pnlShadow1_Paint(object sender, PaintEventArgs e)
         {
-            pnlShadow1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1204, 412, 20, 20));
+            //pnlShadow1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1204, 412, 20, 20));
         }
 
         private void pnlAlerts_Paint(object sender, PaintEventArgs e)
         {
-            pnlAlerts.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1196, 400, 20, 20));
             if (pnlAlerts.Visible == true) {
                 btnAlerts.BackColor = Color.Khaki;
                 btnAlerts.ForeColor = Color.White;
@@ -183,7 +182,6 @@ namespace VTDI_CSS
 
         private void pnlBioData_Paint(object sender, PaintEventArgs e)
         {
-            pnlBioData.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1196, 400, 20, 20));
             if (pnlBioData.Visible == true) {
                 btnAlerts.BackColor = Color.FromArgb(78, 115, 223);
                 btnAlerts.ForeColor = Color.White;
@@ -198,7 +196,6 @@ namespace VTDI_CSS
 
         private void pnlProfileSettings_Paint(object sender, PaintEventArgs e)
         {
-            pnlProfileSettings.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1196, 400, 20, 20));
             if (pnlProfileSettings.Visible == true) {
                 btnAlerts.BackColor = Color.FromArgb(78, 115, 223);
                 btnAlerts.ForeColor = Color.White;
@@ -213,7 +210,6 @@ namespace VTDI_CSS
 
         private void pnlTicketsInfo_Paint(object sender, PaintEventArgs e)
         {
-            pnlTicketsInfo.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1196, 400, 20, 20));
             if (pnlTicketsInfo.Visible == true) {
                 btnAlerts.BackColor = Color.FromArgb(78, 115, 223);
                 btnAlerts.ForeColor = Color.White;
@@ -264,78 +260,6 @@ namespace VTDI_CSS
         private void pnlTicketsCenter_Paint(object sender, PaintEventArgs e)
         {
             pnlTicketsCenter.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 278, 212, 20, 20));
-        }
-
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true) {
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-            else {
-                pnlUserMenu.Visible = true;
-                pnlShadow7.Visible = true;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-            }
-        }
-
-        private void pbxMessages_Click(object sender, EventArgs e)
-        {
-            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true) {
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-            }
-            else {
-                pnlMessageCenter.Visible = true;
-                pnlShadow8.Visible = true;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
-        private void pbxAlertsCenter_Click(object sender, EventArgs e)
-        {
-            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true) {
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-            }
-            else {
-                pnlAlertsCenter.Visible = true;
-                pnlShadow9.Visible = true;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
-        }
-
-        private void pbxTicketsCenter_Click(object sender, EventArgs e)
-        {
-            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true) {
-                pnlTicketsCenter.Visible = false;
-                pnlShadow10.Visible = false;
-            }
-            else {
-                pnlTicketsCenter.Visible = true;
-                pnlShadow10.Visible = true;
-                pnlAlertsCenter.Visible = false;
-                pnlShadow9.Visible = false;
-                pnlMessageCenter.Visible = false;
-                pnlShadow8.Visible = false;
-                pnlUserMenu.Visible = false;
-                pnlShadow7.Visible = false;
-            }
         }
 
         private void btnProfile_MouseEnter(object sender, EventArgs e)
@@ -416,6 +340,86 @@ namespace VTDI_CSS
         private void btnTicketsInfo_MouseLeave(object sender, EventArgs e)
         {
             btnTicketsInfo.ForeColor = Color.White;
+        }
+
+        private void btnUserProfile_Click(object sender, EventArgs e)
+        {
+            if (pnlUserMenu.Visible == true && pnlShadow7.Visible == true)
+            {
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+            else
+            {
+                pnlUserMenu.Visible = true;
+                pnlShadow7.Visible = true;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+            }
+        }
+
+        private void btnMessageCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlMessageCenter.Visible == true && pnlShadow8.Visible == true)
+            {
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+            }
+            else
+            {
+                pnlMessageCenter.Visible = true;
+                pnlShadow8.Visible = true;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+        }
+
+        private void btnNotificationCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlAlertsCenter.Visible == true && pnlShadow9.Visible == true)
+            {
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+            }
+            else
+            {
+                pnlAlertsCenter.Visible = true;
+                pnlShadow9.Visible = true;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
+        }
+
+        private void btnTicketCenter_Click(object sender, EventArgs e)
+        {
+            if (pnlTicketsCenter.Visible == true && pnlShadow10.Visible == true)
+            {
+                pnlTicketsCenter.Visible = false;
+                pnlShadow10.Visible = false;
+            }
+            else
+            {
+                pnlTicketsCenter.Visible = true;
+                pnlShadow10.Visible = true;
+                pnlAlertsCenter.Visible = false;
+                pnlShadow9.Visible = false;
+                pnlMessageCenter.Visible = false;
+                pnlShadow8.Visible = false;
+                pnlUserMenu.Visible = false;
+                pnlShadow7.Visible = false;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
-﻿namespace VTDI_CSS
+﻿
+namespace VTDI_CSS
 {
-    partial class frmActivityLog
+    partial class frmViewTickets
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +30,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActivityLog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewTickets));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnTicketCenter = new JImageButton.JImageButton();
-            this.btnUserProfile = new JImageButton.JImageButton();
-            this.btnNotificationCenter = new JImageButton.JImageButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnMessageCenter = new JImageButton.JImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
@@ -52,12 +49,6 @@
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnTickets = new System.Windows.Forms.Button();
             this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlTicketsCenter = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,13 +68,36 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnActivityLog = new System.Windows.Forms.Button();
             this.pnlShadow7 = new System.Windows.Forms.Panel();
-            this.btnSubmit = new JThinButton.JThinButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.rtbMessage = new System.Windows.Forms.RichTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pbxReply = new System.Windows.Forms.PictureBox();
+            this.pbxEscalate = new System.Windows.Forms.PictureBox();
+            this.pbxSend = new System.Windows.Forms.PictureBox();
+            this.pbxTrash = new System.Windows.Forms.PictureBox();
+            this.pbxAttachment = new System.Windows.Forms.PictureBox();
+            this.lblUnderline = new System.Windows.Forms.Label();
+            this.lblItalic = new System.Windows.Forms.Label();
+            this.lblBold = new System.Windows.Forms.Label();
+            this.lblReply = new System.Windows.Forms.Label();
+            this.rtbReply = new System.Windows.Forms.RichTextBox();
+            this.ofdUploadFile = new System.Windows.Forms.OpenFileDialog();
+            this.btnTicketCenter = new JImageButton.JImageButton();
+            this.btnUserProfile = new JImageButton.JImageButton();
+            this.btnNotificationCenter = new JImageButton.JImageButton();
+            this.btnMessageCenter = new JImageButton.JImageButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlTicketsCenter.SuspendLayout();
             this.panel8.SuspendLayout();
             this.pnlAlertsCenter.SuspendLayout();
@@ -91,6 +105,12 @@
             this.pnlMessageCenter.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnlUserMenu.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxReply)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEscalate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSend)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTrash)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAttachment)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -99,8 +119,8 @@
             this.panel2.Controls.Add(this.btnTicketCenter);
             this.panel2.Controls.Add(this.btnUserProfile);
             this.panel2.Controls.Add(this.btnNotificationCenter);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.btnMessageCenter);
+            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnMinimize);
@@ -111,61 +131,7 @@
             this.panel2.Location = new System.Drawing.Point(228, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1272, 93);
-            this.panel2.TabIndex = 3;
-            // 
-            // btnTicketCenter
-            // 
-            this.btnTicketCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTicketCenter.BackColor = System.Drawing.Color.White;
-            this.btnTicketCenter.CausesValidation = false;
-            this.btnTicketCenter.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnTicketCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnTicketCenter.ErrorImage")));
-            this.btnTicketCenter.Image = global::VTDI_CSS.Properties.Resources.sticky_notes;
-            this.btnTicketCenter.ImageHover = null;
-            this.btnTicketCenter.InitialImage = null;
-            this.btnTicketCenter.Location = new System.Drawing.Point(515, 45);
-            this.btnTicketCenter.Name = "btnTicketCenter";
-            this.btnTicketCenter.Size = new System.Drawing.Size(30, 25);
-            this.btnTicketCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnTicketCenter.TabIndex = 33;
-            this.btnTicketCenter.Zoom = 4;
-            this.btnTicketCenter.Click += new System.EventHandler(this.btnTicketCenter_Click);
-            // 
-            // btnUserProfile
-            // 
-            this.btnUserProfile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnUserProfile.BackColor = System.Drawing.Color.White;
-            this.btnUserProfile.CausesValidation = false;
-            this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnUserProfile.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnUserProfile.ErrorImage")));
-            this.btnUserProfile.Image = global::VTDI_CSS.Properties.Resources.profile;
-            this.btnUserProfile.ImageHover = null;
-            this.btnUserProfile.InitialImage = null;
-            this.btnUserProfile.Location = new System.Drawing.Point(1040, 45);
-            this.btnUserProfile.Name = "btnUserProfile";
-            this.btnUserProfile.Size = new System.Drawing.Size(30, 29);
-            this.btnUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnUserProfile.TabIndex = 31;
-            this.btnUserProfile.Zoom = 4;
-            this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
-            // 
-            // btnNotificationCenter
-            // 
-            this.btnNotificationCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNotificationCenter.BackColor = System.Drawing.Color.White;
-            this.btnNotificationCenter.CausesValidation = false;
-            this.btnNotificationCenter.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnNotificationCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnNotificationCenter.ErrorImage")));
-            this.btnNotificationCenter.Image = global::VTDI_CSS.Properties.Resources.notification;
-            this.btnNotificationCenter.ImageHover = null;
-            this.btnNotificationCenter.InitialImage = null;
-            this.btnNotificationCenter.Location = new System.Drawing.Point(578, 45);
-            this.btnNotificationCenter.Name = "btnNotificationCenter";
-            this.btnNotificationCenter.Size = new System.Drawing.Size(30, 25);
-            this.btnNotificationCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNotificationCenter.TabIndex = 32;
-            this.btnNotificationCenter.Zoom = 4;
-            this.btnNotificationCenter.Click += new System.EventHandler(this.btnNotificationCenter_Click);
+            this.panel2.TabIndex = 5;
             // 
             // label13
             // 
@@ -176,24 +142,6 @@
             this.label13.Size = new System.Drawing.Size(35, 101);
             this.label13.TabIndex = 13;
             this.label13.Text = "|";
-            // 
-            // btnMessageCenter
-            // 
-            this.btnMessageCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMessageCenter.BackColor = System.Drawing.Color.White;
-            this.btnMessageCenter.CausesValidation = false;
-            this.btnMessageCenter.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnMessageCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMessageCenter.ErrorImage")));
-            this.btnMessageCenter.Image = global::VTDI_CSS.Properties.Resources.mail;
-            this.btnMessageCenter.ImageHover = null;
-            this.btnMessageCenter.InitialImage = null;
-            this.btnMessageCenter.Location = new System.Drawing.Point(642, 45);
-            this.btnMessageCenter.Name = "btnMessageCenter";
-            this.btnMessageCenter.Size = new System.Drawing.Size(30, 25);
-            this.btnMessageCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMessageCenter.TabIndex = 30;
-            this.btnMessageCenter.Zoom = 4;
-            this.btnMessageCenter.Click += new System.EventHandler(this.btnMessageCenter_Click);
             // 
             // pictureBox2
             // 
@@ -207,7 +155,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::VTDI_CSS.Properties.Resources.log;
+            this.pictureBox1.Image = global::VTDI_CSS.Properties.Resources.tickets;
             this.pictureBox1.Location = new System.Drawing.Point(6, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 62);
@@ -238,9 +186,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(89, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 45);
+            this.label5.Size = new System.Drawing.Size(125, 45);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Activity Log";
+            this.label5.Text = "Tickets";
             // 
             // lblDateTime
             // 
@@ -263,6 +211,7 @@
             this.lblUsername.Size = new System.Drawing.Size(101, 25);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username";
+            //this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // panel1
             // 
@@ -279,15 +228,15 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 900);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 4;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gold;
-            this.panel4.Location = new System.Drawing.Point(0, 357);
+            this.panel4.Location = new System.Drawing.Point(0, 245);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 47);
-            this.panel4.TabIndex = 12;
+            this.panel4.TabIndex = 13;
             // 
             // pictureBox4
             // 
@@ -391,62 +340,6 @@
             // tmrDateTime
             // 
             this.tmrDateTime.Tick += new System.EventHandler(this.tmrDateTime_Tick);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(249, 143);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(334, 28);
-            this.comboBox4.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(245, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 21);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Filter By Action";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(228, 245);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1272, 655);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Location = new System.Drawing.Point(237, 188);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1254, 10);
-            this.panel3.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(283, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 21);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "actions found";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(245, 208);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "###";
             // 
             // pnlTicketsCenter
             // 
@@ -610,8 +503,6 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // btnSettings
             // 
@@ -626,8 +517,6 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.MouseEnter += new System.EventHandler(this.btnSettings_MouseEnter);
-            this.btnSettings.MouseLeave += new System.EventHandler(this.btnSettings_MouseLeave);
             // 
             // btnLogout
             // 
@@ -642,8 +531,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.MouseEnter += new System.EventHandler(this.btnLogout_MouseEnter);
-            this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
             // 
             // btnActivityLog
             // 
@@ -658,8 +545,6 @@
             this.btnActivityLog.Text = "Activity Log";
             this.btnActivityLog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActivityLog.UseVisualStyleBackColor = true;
-            this.btnActivityLog.MouseEnter += new System.EventHandler(this.btnActivityLog_MouseEnter);
-            this.btnActivityLog.MouseLeave += new System.EventHandler(this.btnActivityLog_MouseLeave);
             // 
             // pnlShadow7
             // 
@@ -672,32 +557,310 @@
             this.pnlShadow7.Visible = false;
             this.pnlShadow7.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlShadow7_Paint);
             // 
-            // btnSubmit
+            // label1
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.Transparent;
-            this.btnSubmit.BackgroundColor = System.Drawing.Color.White;
-            this.btnSubmit.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.BorderRadius = 12;
-            this.btnSubmit.ButtonText = "Submit";
-            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Font_Size = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColors = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.HoverBackground = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.HoverBorder = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.HoverFontColor = System.Drawing.Color.White;
-            this.btnSubmit.LineThickness = 1;
-            this.btnSubmit.Location = new System.Drawing.Point(612, 143);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(108, 28);
-            this.btnSubmit.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(250, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Ticket ID";
             // 
-            // frmActivityLog
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(250, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 25);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Student Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(250, 205);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 25);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Date";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(250, 254);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 25);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Recipient(s):";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(397, 254);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 25);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Recipient";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(397, 303);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 25);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Subject";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(250, 303);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 25);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Subject:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(250, 357);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(93, 25);
+            this.label17.TabIndex = 37;
+            this.label17.Text = "Message:";
+            // 
+            // rtbMessage
+            // 
+            this.rtbMessage.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbMessage.Enabled = false;
+            this.rtbMessage.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.rtbMessage.Location = new System.Drawing.Point(402, 357);
+            this.rtbMessage.Name = "rtbMessage";
+            this.rtbMessage.Size = new System.Drawing.Size(1029, 500);
+            this.rtbMessage.TabIndex = 38;
+            this.rtbMessage.Text = "";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.pbxReply);
+            this.panel3.Controls.Add(this.pbxEscalate);
+            this.panel3.Controls.Add(this.pbxSend);
+            this.panel3.Controls.Add(this.pbxTrash);
+            this.panel3.Controls.Add(this.pbxAttachment);
+            this.panel3.Controls.Add(this.lblUnderline);
+            this.panel3.Controls.Add(this.lblItalic);
+            this.panel3.Controls.Add(this.lblBold);
+            this.panel3.Location = new System.Drawing.Point(1437, 357);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(51, 500);
+            this.panel3.TabIndex = 41;
+            // 
+            // pbxReply
+            // 
+            this.pbxReply.Image = global::VTDI_CSS.Properties.Resources.reply;
+            this.pbxReply.Location = new System.Drawing.Point(6, 177);
+            this.pbxReply.Name = "pbxReply";
+            this.pbxReply.Size = new System.Drawing.Size(33, 40);
+            this.pbxReply.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxReply.TabIndex = 47;
+            this.pbxReply.TabStop = false;
+            this.pbxReply.Click += new System.EventHandler(this.pbxReply_Click);
+            // 
+            // pbxEscalate
+            // 
+            this.pbxEscalate.Image = global::VTDI_CSS.Properties.Resources.elevate;
+            this.pbxEscalate.Location = new System.Drawing.Point(6, 242);
+            this.pbxEscalate.Name = "pbxEscalate";
+            this.pbxEscalate.Size = new System.Drawing.Size(33, 40);
+            this.pbxEscalate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxEscalate.TabIndex = 46;
+            this.pbxEscalate.TabStop = false;
+            // 
+            // pbxSend
+            // 
+            this.pbxSend.Image = global::VTDI_CSS.Properties.Resources.send;
+            this.pbxSend.Location = new System.Drawing.Point(6, 440);
+            this.pbxSend.Name = "pbxSend";
+            this.pbxSend.Size = new System.Drawing.Size(33, 40);
+            this.pbxSend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSend.TabIndex = 45;
+            this.pbxSend.TabStop = false;
+            // 
+            // pbxTrash
+            // 
+            this.pbxTrash.Image = global::VTDI_CSS.Properties.Resources.trash;
+            this.pbxTrash.Location = new System.Drawing.Point(6, 376);
+            this.pbxTrash.Name = "pbxTrash";
+            this.pbxTrash.Size = new System.Drawing.Size(33, 40);
+            this.pbxTrash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxTrash.TabIndex = 44;
+            this.pbxTrash.TabStop = false;
+            // 
+            // pbxAttachment
+            // 
+            this.pbxAttachment.Image = global::VTDI_CSS.Properties.Resources.attachment;
+            this.pbxAttachment.Location = new System.Drawing.Point(6, 310);
+            this.pbxAttachment.Name = "pbxAttachment";
+            this.pbxAttachment.Size = new System.Drawing.Size(33, 40);
+            this.pbxAttachment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxAttachment.TabIndex = 41;
+            this.pbxAttachment.TabStop = false;
+            this.pbxAttachment.Click += new System.EventHandler(this.pbxAttachment_Click);
+            // 
+            // lblUnderline
+            // 
+            this.lblUnderline.AutoSize = true;
+            this.lblUnderline.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnderline.Location = new System.Drawing.Point(11, 121);
+            this.lblUnderline.Name = "lblUnderline";
+            this.lblUnderline.Size = new System.Drawing.Size(28, 30);
+            this.lblUnderline.TabIndex = 43;
+            this.lblUnderline.Text = "U";
+            this.lblUnderline.Click += new System.EventHandler(this.lblUnderline_Click);
+            // 
+            // lblItalic
+            // 
+            this.lblItalic.AutoSize = true;
+            this.lblItalic.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItalic.Location = new System.Drawing.Point(14, 71);
+            this.lblItalic.Name = "lblItalic";
+            this.lblItalic.Size = new System.Drawing.Size(20, 30);
+            this.lblItalic.TabIndex = 42;
+            this.lblItalic.Text = "I";
+            this.lblItalic.Click += new System.EventHandler(this.lblItalic_Click);
+            // 
+            // lblBold
+            // 
+            this.lblBold.AutoSize = true;
+            this.lblBold.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBold.Location = new System.Drawing.Point(13, 17);
+            this.lblBold.Name = "lblBold";
+            this.lblBold.Size = new System.Drawing.Size(26, 30);
+            this.lblBold.TabIndex = 41;
+            this.lblBold.Text = "B";
+            this.lblBold.Click += new System.EventHandler(this.lblBold_Click);
+            // 
+            // lblReply
+            // 
+            this.lblReply.AutoSize = true;
+            this.lblReply.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReply.Location = new System.Drawing.Point(250, 632);
+            this.lblReply.Name = "lblReply";
+            this.lblReply.Size = new System.Drawing.Size(66, 25);
+            this.lblReply.TabIndex = 42;
+            this.lblReply.Text = "Reply:";
+            this.lblReply.Visible = false;
+            // 
+            // rtbReply
+            // 
+            this.rtbReply.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbReply.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.rtbReply.Location = new System.Drawing.Point(402, 632);
+            this.rtbReply.Name = "rtbReply";
+            this.rtbReply.Size = new System.Drawing.Size(1029, 225);
+            this.rtbReply.TabIndex = 43;
+            this.rtbReply.Text = "";
+            this.rtbReply.Visible = false;
+            // 
+            // btnTicketCenter
+            // 
+            this.btnTicketCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTicketCenter.BackColor = System.Drawing.Color.White;
+            this.btnTicketCenter.CausesValidation = false;
+            this.btnTicketCenter.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTicketCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnTicketCenter.ErrorImage")));
+            this.btnTicketCenter.Image = global::VTDI_CSS.Properties.Resources.sticky_notes;
+            this.btnTicketCenter.ImageHover = null;
+            this.btnTicketCenter.InitialImage = null;
+            this.btnTicketCenter.Location = new System.Drawing.Point(515, 45);
+            this.btnTicketCenter.Name = "btnTicketCenter";
+            this.btnTicketCenter.Size = new System.Drawing.Size(30, 25);
+            this.btnTicketCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTicketCenter.TabIndex = 41;
+            this.btnTicketCenter.Zoom = 4;
+            this.btnTicketCenter.Click += new System.EventHandler(this.btnTicketCenter_Click);
+            // 
+            // btnUserProfile
+            // 
+            this.btnUserProfile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUserProfile.BackColor = System.Drawing.Color.White;
+            this.btnUserProfile.CausesValidation = false;
+            this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnUserProfile.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnUserProfile.ErrorImage")));
+            this.btnUserProfile.Image = global::VTDI_CSS.Properties.Resources.profile;
+            this.btnUserProfile.ImageHover = null;
+            this.btnUserProfile.InitialImage = null;
+            this.btnUserProfile.Location = new System.Drawing.Point(1040, 45);
+            this.btnUserProfile.Name = "btnUserProfile";
+            this.btnUserProfile.Size = new System.Drawing.Size(30, 29);
+            this.btnUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnUserProfile.TabIndex = 39;
+            this.btnUserProfile.Zoom = 4;
+            this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
+            // 
+            // btnNotificationCenter
+            // 
+            this.btnNotificationCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNotificationCenter.BackColor = System.Drawing.Color.White;
+            this.btnNotificationCenter.CausesValidation = false;
+            this.btnNotificationCenter.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnNotificationCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnNotificationCenter.ErrorImage")));
+            this.btnNotificationCenter.Image = global::VTDI_CSS.Properties.Resources.notification;
+            this.btnNotificationCenter.ImageHover = null;
+            this.btnNotificationCenter.InitialImage = null;
+            this.btnNotificationCenter.Location = new System.Drawing.Point(578, 45);
+            this.btnNotificationCenter.Name = "btnNotificationCenter";
+            this.btnNotificationCenter.Size = new System.Drawing.Size(30, 25);
+            this.btnNotificationCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNotificationCenter.TabIndex = 40;
+            this.btnNotificationCenter.Zoom = 4;
+            this.btnNotificationCenter.Click += new System.EventHandler(this.btnNotificationCenter_Click);
+            // 
+            // btnMessageCenter
+            // 
+            this.btnMessageCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMessageCenter.BackColor = System.Drawing.Color.White;
+            this.btnMessageCenter.CausesValidation = false;
+            this.btnMessageCenter.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnMessageCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMessageCenter.ErrorImage")));
+            this.btnMessageCenter.Image = global::VTDI_CSS.Properties.Resources.mail;
+            this.btnMessageCenter.ImageHover = null;
+            this.btnMessageCenter.InitialImage = null;
+            this.btnMessageCenter.Location = new System.Drawing.Point(642, 45);
+            this.btnMessageCenter.Name = "btnMessageCenter";
+            this.btnMessageCenter.Size = new System.Drawing.Size(30, 25);
+            this.btnMessageCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMessageCenter.TabIndex = 38;
+            this.btnMessageCenter.Zoom = 4;
+            this.btnMessageCenter.Click += new System.EventHandler(this.btnMessageCenter_Click);
+            // 
+            // frmViewTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.rtbReply);
+            this.Controls.Add(this.lblReply);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.rtbMessage);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlTicketsCenter);
             this.Controls.Add(this.pnlShadow10);
             this.Controls.Add(this.pnlAlertsCenter);
@@ -706,22 +869,14 @@
             this.Controls.Add(this.pnlShadow8);
             this.Controls.Add(this.pnlUserMenu);
             this.Controls.Add(this.pnlShadow7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmActivityLog";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmActivityLog";
-            this.Load += new System.EventHandler(this.frmActivityLog_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmActivityLog_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmActivityLog_MouseMove);
+            this.Name = "frmViewTickets";
+            this.Text = "frmTickets";
+            this.Load += new System.EventHandler(this.frmTickets_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmTickets_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmTickets_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -729,7 +884,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlTicketsCenter.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -740,6 +894,13 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.pnlUserMenu.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxReply)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEscalate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSend)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTrash)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAttachment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -764,12 +925,7 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnTickets;
         private System.Windows.Forms.Timer tmrDateTime;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel pnlTicketsCenter;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label16;
@@ -789,11 +945,30 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnActivityLog;
         private System.Windows.Forms.Panel pnlShadow7;
-        private System.Windows.Forms.Panel panel4;
-        private JImageButton.JImageButton btnUserProfile;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.RichTextBox rtbMessage;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pbxSend;
+        private System.Windows.Forms.PictureBox pbxTrash;
+        private System.Windows.Forms.PictureBox pbxAttachment;
+        private System.Windows.Forms.Label lblUnderline;
+        private System.Windows.Forms.Label lblItalic;
+        private System.Windows.Forms.Label lblBold;
+        private System.Windows.Forms.PictureBox pbxReply;
+        private System.Windows.Forms.PictureBox pbxEscalate;
+        private System.Windows.Forms.Label lblReply;
+        private System.Windows.Forms.RichTextBox rtbReply;
+        private System.Windows.Forms.OpenFileDialog ofdUploadFile;
         private JImageButton.JImageButton btnTicketCenter;
+        private JImageButton.JImageButton btnUserProfile;
         private JImageButton.JImageButton btnNotificationCenter;
         private JImageButton.JImageButton btnMessageCenter;
-        private JThinButton.JThinButton btnSubmit;
     }
 }

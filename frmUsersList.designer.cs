@@ -1,7 +1,7 @@
 ﻿
 namespace VTDI_CSS
 {
-    partial class frmUser
+    partial class frmUsersList
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@ namespace VTDI_CSS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsersList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -41,19 +42,17 @@ namespace VTDI_CSS
             this.btnTickets = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTicketCenter = new JImageButton.JImageButton();
+            this.btnUserProfile = new JImageButton.JImageButton();
+            this.btnNotificationCenter = new JImageButton.JImageButton();
+            this.btnMessageCenter = new JImageButton.JImageButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.pbxTicketsCenter = new System.Windows.Forms.PictureBox();
-            this.pbxMessages = new System.Windows.Forms.PictureBox();
-            this.pbxAlertsCenter = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
-            this.tmrFadeIn = new System.Windows.Forms.Timer(this.components);
-            this.tmrFadeOut = new System.Windows.Forms.Timer(this.components);
             this.pnlShadow7 = new System.Windows.Forms.Panel();
             this.btnActivityLog = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -62,12 +61,6 @@ namespace VTDI_CSS
             this.label4 = new System.Windows.Forms.Label();
             this.pnlUserMenu = new System.Windows.Forms.Panel();
             this.pnlShadow4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pnlYellow = new System.Windows.Forms.Panel();
-            this.pnlPendingTickets = new System.Windows.Forms.Panel();
             this.pnlShadow8 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -88,19 +81,14 @@ namespace VTDI_CSS
             this.telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.department_unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tmrFadeIn = new System.Windows.Forms.Timer(this.components);
+            this.tmrFadeOut = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTicketsCenter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMessages)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAlertsCenter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlUserMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.pnlPendingTickets.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnlMessageCenter.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -124,7 +112,7 @@ namespace VTDI_CSS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 788);
+            this.panel1.Size = new System.Drawing.Size(228, 900);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -244,16 +232,15 @@ namespace VTDI_CSS
             this.lblUsername.Size = new System.Drawing.Size(101, 25);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username";
-            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnTicketCenter);
+            this.panel2.Controls.Add(this.btnUserProfile);
+            this.panel2.Controls.Add(this.btnNotificationCenter);
+            this.panel2.Controls.Add(this.btnMessageCenter);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.pbxTicketsCenter);
-            this.panel2.Controls.Add(this.pbxMessages);
-            this.panel2.Controls.Add(this.pbxAlertsCenter);
-            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnMinimize);
@@ -263,8 +250,80 @@ namespace VTDI_CSS
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(228, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1158, 93);
+            this.panel2.Size = new System.Drawing.Size(1272, 93);
             this.panel2.TabIndex = 1;
+            // 
+            // btnTicketCenter
+            // 
+            this.btnTicketCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTicketCenter.BackColor = System.Drawing.Color.White;
+            this.btnTicketCenter.CausesValidation = false;
+            this.btnTicketCenter.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTicketCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnTicketCenter.ErrorImage")));
+            this.btnTicketCenter.Image = global::VTDI_CSS.Properties.Resources.sticky_notes;
+            this.btnTicketCenter.ImageHover = null;
+            this.btnTicketCenter.InitialImage = null;
+            this.btnTicketCenter.Location = new System.Drawing.Point(515, 45);
+            this.btnTicketCenter.Name = "btnTicketCenter";
+            this.btnTicketCenter.Size = new System.Drawing.Size(30, 25);
+            this.btnTicketCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTicketCenter.TabIndex = 37;
+            this.btnTicketCenter.Zoom = 4;
+            this.btnTicketCenter.Click += new System.EventHandler(this.btnTicketCenter_Click);
+            // 
+            // btnUserProfile
+            // 
+            this.btnUserProfile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUserProfile.BackColor = System.Drawing.Color.White;
+            this.btnUserProfile.CausesValidation = false;
+            this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnUserProfile.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnUserProfile.ErrorImage")));
+            this.btnUserProfile.Image = global::VTDI_CSS.Properties.Resources.profile;
+            this.btnUserProfile.ImageHover = null;
+            this.btnUserProfile.InitialImage = null;
+            this.btnUserProfile.Location = new System.Drawing.Point(1040, 45);
+            this.btnUserProfile.Name = "btnUserProfile";
+            this.btnUserProfile.Size = new System.Drawing.Size(30, 29);
+            this.btnUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnUserProfile.TabIndex = 35;
+            this.btnUserProfile.Zoom = 4;
+            this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
+            // 
+            // btnNotificationCenter
+            // 
+            this.btnNotificationCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNotificationCenter.BackColor = System.Drawing.Color.White;
+            this.btnNotificationCenter.CausesValidation = false;
+            this.btnNotificationCenter.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnNotificationCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnNotificationCenter.ErrorImage")));
+            this.btnNotificationCenter.Image = global::VTDI_CSS.Properties.Resources.notification;
+            this.btnNotificationCenter.ImageHover = null;
+            this.btnNotificationCenter.InitialImage = null;
+            this.btnNotificationCenter.Location = new System.Drawing.Point(578, 45);
+            this.btnNotificationCenter.Name = "btnNotificationCenter";
+            this.btnNotificationCenter.Size = new System.Drawing.Size(30, 25);
+            this.btnNotificationCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNotificationCenter.TabIndex = 36;
+            this.btnNotificationCenter.Zoom = 4;
+            this.btnNotificationCenter.Click += new System.EventHandler(this.btnNotificationCenter_Click);
+            // 
+            // btnMessageCenter
+            // 
+            this.btnMessageCenter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMessageCenter.BackColor = System.Drawing.Color.White;
+            this.btnMessageCenter.CausesValidation = false;
+            this.btnMessageCenter.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnMessageCenter.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMessageCenter.ErrorImage")));
+            this.btnMessageCenter.Image = global::VTDI_CSS.Properties.Resources.mail;
+            this.btnMessageCenter.ImageHover = null;
+            this.btnMessageCenter.InitialImage = null;
+            this.btnMessageCenter.Location = new System.Drawing.Point(642, 45);
+            this.btnMessageCenter.Name = "btnMessageCenter";
+            this.btnMessageCenter.Size = new System.Drawing.Size(30, 25);
+            this.btnMessageCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMessageCenter.TabIndex = 34;
+            this.btnMessageCenter.Zoom = 4;
+            this.btnMessageCenter.Click += new System.EventHandler(this.btnMessageCenter_Click);
             // 
             // label13
             // 
@@ -275,49 +334,6 @@ namespace VTDI_CSS
             this.label13.Size = new System.Drawing.Size(35, 101);
             this.label13.TabIndex = 13;
             this.label13.Text = "|";
-            // 
-            // pbxTicketsCenter
-            // 
-            this.pbxTicketsCenter.Image = global::VTDI_CSS.Properties.Resources.sticky_notes;
-            this.pbxTicketsCenter.Location = new System.Drawing.Point(515, 45);
-            this.pbxTicketsCenter.Name = "pbxTicketsCenter";
-            this.pbxTicketsCenter.Size = new System.Drawing.Size(30, 29);
-            this.pbxTicketsCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxTicketsCenter.TabIndex = 11;
-            this.pbxTicketsCenter.TabStop = false;
-            this.pbxTicketsCenter.Click += new System.EventHandler(this.pbxTicketsCenter_Click);
-            // 
-            // pbxMessages
-            // 
-            this.pbxMessages.Image = global::VTDI_CSS.Properties.Resources.mail;
-            this.pbxMessages.Location = new System.Drawing.Point(642, 45);
-            this.pbxMessages.Name = "pbxMessages";
-            this.pbxMessages.Size = new System.Drawing.Size(30, 29);
-            this.pbxMessages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxMessages.TabIndex = 10;
-            this.pbxMessages.TabStop = false;
-            this.pbxMessages.Click += new System.EventHandler(this.pbxMessages_Click);
-            // 
-            // pbxAlertsCenter
-            // 
-            this.pbxAlertsCenter.Image = global::VTDI_CSS.Properties.Resources.notification;
-            this.pbxAlertsCenter.Location = new System.Drawing.Point(578, 45);
-            this.pbxAlertsCenter.Name = "pbxAlertsCenter";
-            this.pbxAlertsCenter.Size = new System.Drawing.Size(30, 29);
-            this.pbxAlertsCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxAlertsCenter.TabIndex = 9;
-            this.pbxAlertsCenter.TabStop = false;
-            this.pbxAlertsCenter.Click += new System.EventHandler(this.pbxAlertsCenter_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::VTDI_CSS.Properties.Resources.profile;
-            this.pictureBox3.Location = new System.Drawing.Point(1040, 45);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -380,17 +396,6 @@ namespace VTDI_CSS
             // tmrDateTime
             // 
             this.tmrDateTime.Tick += new System.EventHandler(this.tmrDateTime_Tick);
-            // 
-            // tmrFadeIn
-            // 
-            this.tmrFadeIn.Enabled = true;
-            this.tmrFadeIn.Interval = 25;
-            this.tmrFadeIn.Tick += new System.EventHandler(this.tmrFadeIn_Tick);
-            // 
-            // tmrFadeOut
-            // 
-            this.tmrFadeOut.Enabled = true;
-            this.tmrFadeOut.Interval = 25;
             // 
             // pnlShadow7
             // 
@@ -499,69 +504,6 @@ namespace VTDI_CSS
             this.pnlShadow4.Name = "pnlShadow4";
             this.pnlShadow4.Size = new System.Drawing.Size(200, 100);
             this.pnlShadow4.TabIndex = 24;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(194)))), ((int)(((byte)(62)))));
-            this.label6.Location = new System.Drawing.Point(27, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 21);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Pending Tickets";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(26, 69);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 30);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "###";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::VTDI_CSS.Properties.Resources.notepad;
-            this.pictureBox9.Location = new System.Drawing.Point(204, 49);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(66, 50);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::VTDI_CSS.Properties.Resources.pending;
-            this.pictureBox12.Location = new System.Drawing.Point(253, 33);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(31, 25);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 4;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pnlYellow
-            // 
-            this.pnlYellow.Location = new System.Drawing.Point(0, 0);
-            this.pnlYellow.Name = "pnlYellow";
-            this.pnlYellow.Size = new System.Drawing.Size(200, 100);
-            this.pnlYellow.TabIndex = 0;
-            // 
-            // pnlPendingTickets
-            // 
-            this.pnlPendingTickets.BackColor = System.Drawing.Color.White;
-            this.pnlPendingTickets.Controls.Add(this.pnlYellow);
-            this.pnlPendingTickets.Controls.Add(this.pictureBox12);
-            this.pnlPendingTickets.Controls.Add(this.pictureBox9);
-            this.pnlPendingTickets.Controls.Add(this.label10);
-            this.pnlPendingTickets.Controls.Add(this.label6);
-            this.pnlPendingTickets.Location = new System.Drawing.Point(568, 133);
-            this.pnlPendingTickets.Name = "pnlPendingTickets";
-            this.pnlPendingTickets.Size = new System.Drawing.Size(287, 120);
-            this.pnlPendingTickets.TabIndex = 3;
-            this.pnlPendingTickets.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPendingTickets_Paint);
             // 
             // pnlShadow8
             // 
@@ -688,6 +630,7 @@ namespace VTDI_CSS
             // 
             // dataGridviewUsers
             // 
+            this.dataGridviewUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridviewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridviewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -699,7 +642,7 @@ namespace VTDI_CSS
             this.department_unit});
             this.dataGridviewUsers.Location = new System.Drawing.Point(228, 316);
             this.dataGridviewUsers.Name = "dataGridviewUsers";
-            this.dataGridviewUsers.Size = new System.Drawing.Size(1158, 472);
+            this.dataGridviewUsers.Size = new System.Drawing.Size(1272, 584);
             this.dataGridviewUsers.TabIndex = 22;
             // 
             // id
@@ -737,12 +680,23 @@ namespace VTDI_CSS
             this.department_unit.HeaderText = "Department Unit";
             this.department_unit.Name = "department_unit";
             // 
-            // frmUser
+            // tmrFadeIn
+            // 
+            this.tmrFadeIn.Enabled = true;
+            this.tmrFadeIn.Interval = 25;
+            this.tmrFadeIn.Tick += new System.EventHandler(this.tmrFadeIn_Tick);
+            // 
+            // tmrFadeOut
+            // 
+            this.tmrFadeOut.Enabled = true;
+            this.tmrFadeOut.Interval = 25;
+            // 
+            // frmUsersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.dataGridviewUsers);
             this.Controls.Add(this.pnlTicketsCenter);
             this.Controls.Add(this.pnlShadow10);
@@ -752,12 +706,11 @@ namespace VTDI_CSS
             this.Controls.Add(this.pnlShadow8);
             this.Controls.Add(this.pnlUserMenu);
             this.Controls.Add(this.pnlShadow7);
-            this.Controls.Add(this.pnlPendingTickets);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlShadow4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmUser";
+            this.Name = "frmUsersList";
             this.Opacity = 0D;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.frmUser_Load);
@@ -768,17 +721,9 @@ namespace VTDI_CSS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTicketsCenter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMessages)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAlertsCenter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlUserMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.pnlPendingTickets.ResumeLayout(false);
-            this.pnlPendingTickets.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.pnlMessageCenter.ResumeLayout(false);
@@ -806,19 +751,13 @@ namespace VTDI_CSS
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Label lblDateTime;
-        private System.Windows.Forms.PictureBox pbxMessages;
-        private System.Windows.Forms.PictureBox pbxAlertsCenter;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pbxTicketsCenter;
         private System.Windows.Forms.Timer tmrDateTime;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Timer tmrFadeIn;
-        private System.Windows.Forms.Timer tmrFadeOut;
         private System.Windows.Forms.Panel pnlShadow7;
         private System.Windows.Forms.Button btnActivityLog;
         private System.Windows.Forms.Button btnLogout;
@@ -827,12 +766,6 @@ namespace VTDI_CSS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnlUserMenu;
         private System.Windows.Forms.Panel pnlShadow4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Panel pnlYellow;
-        private System.Windows.Forms.Panel pnlPendingTickets;
         private System.Windows.Forms.Panel pnlShadow8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label14;
@@ -853,6 +786,12 @@ namespace VTDI_CSS
         private System.Windows.Forms.DataGridViewTextBoxColumn telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn userType;
         private System.Windows.Forms.DataGridViewTextBoxColumn department_unit;
+        private JImageButton.JImageButton btnTicketCenter;
+        private JImageButton.JImageButton btnUserProfile;
+        private JImageButton.JImageButton btnNotificationCenter;
+        private JImageButton.JImageButton btnMessageCenter;
+        private System.Windows.Forms.Timer tmrFadeIn;
+        private System.Windows.Forms.Timer tmrFadeOut;
     }
 }
 

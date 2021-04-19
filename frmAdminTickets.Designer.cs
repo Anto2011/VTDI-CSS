@@ -1,6 +1,7 @@
-﻿namespace VTDI_CSS
+﻿
+namespace VTDI_CSS
 {
-    partial class frmActivityLog
+    partial class frmAdminTickets
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +30,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActivityLog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminTickets));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTicketCenter = new JImageButton.JImageButton();
             this.btnUserProfile = new JImageButton.JImageButton();
@@ -51,13 +52,13 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnTickets = new System.Windows.Forms.Button();
-            this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSearch = new JMetroTextBox.JMetroTextBox();
+            this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
             this.pnlTicketsCenter = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnActivityLog = new System.Windows.Forms.Button();
             this.pnlShadow7 = new System.Windows.Forms.Panel();
-            this.btnSubmit = new JThinButton.JThinButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,7 +112,7 @@
             this.panel2.Location = new System.Drawing.Point(228, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1272, 93);
-            this.panel2.TabIndex = 3;
+            this.panel2.TabIndex = 5;
             // 
             // btnTicketCenter
             // 
@@ -127,7 +128,7 @@
             this.btnTicketCenter.Name = "btnTicketCenter";
             this.btnTicketCenter.Size = new System.Drawing.Size(30, 25);
             this.btnTicketCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnTicketCenter.TabIndex = 33;
+            this.btnTicketCenter.TabIndex = 47;
             this.btnTicketCenter.Zoom = 4;
             this.btnTicketCenter.Click += new System.EventHandler(this.btnTicketCenter_Click);
             // 
@@ -145,7 +146,7 @@
             this.btnUserProfile.Name = "btnUserProfile";
             this.btnUserProfile.Size = new System.Drawing.Size(30, 29);
             this.btnUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnUserProfile.TabIndex = 31;
+            this.btnUserProfile.TabIndex = 45;
             this.btnUserProfile.Zoom = 4;
             this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
             // 
@@ -163,7 +164,7 @@
             this.btnNotificationCenter.Name = "btnNotificationCenter";
             this.btnNotificationCenter.Size = new System.Drawing.Size(30, 25);
             this.btnNotificationCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNotificationCenter.TabIndex = 32;
+            this.btnNotificationCenter.TabIndex = 46;
             this.btnNotificationCenter.Zoom = 4;
             this.btnNotificationCenter.Click += new System.EventHandler(this.btnNotificationCenter_Click);
             // 
@@ -191,7 +192,7 @@
             this.btnMessageCenter.Name = "btnMessageCenter";
             this.btnMessageCenter.Size = new System.Drawing.Size(30, 25);
             this.btnMessageCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMessageCenter.TabIndex = 30;
+            this.btnMessageCenter.TabIndex = 44;
             this.btnMessageCenter.Zoom = 4;
             this.btnMessageCenter.Click += new System.EventHandler(this.btnMessageCenter_Click);
             // 
@@ -207,7 +208,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::VTDI_CSS.Properties.Resources.log;
+            this.pictureBox1.Image = global::VTDI_CSS.Properties.Resources.tickets;
             this.pictureBox1.Location = new System.Drawing.Point(6, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 62);
@@ -225,6 +226,7 @@
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(33, 44);
             this.btnMinimize.TabIndex = 5;
+            this.btnMinimize.TabStop = false;
             this.btnMinimize.Text = "-";
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -238,9 +240,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(89, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 45);
+            this.label5.Size = new System.Drawing.Size(125, 45);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Activity Log";
+            this.label5.Text = "Tickets";
             // 
             // lblDateTime
             // 
@@ -279,15 +281,15 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 900);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 4;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gold;
-            this.panel4.Location = new System.Drawing.Point(0, 357);
+            this.panel4.Location = new System.Drawing.Point(0, 245);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 47);
-            this.panel4.TabIndex = 12;
+            this.panel4.TabIndex = 13;
             // 
             // pictureBox4
             // 
@@ -308,7 +310,7 @@
             this.btnDashboard.Location = new System.Drawing.Point(12, 133);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(216, 47);
-            this.btnDashboard.TabIndex = 11;
+            this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -346,7 +348,7 @@
             this.btnExit.Location = new System.Drawing.Point(12, 477);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(216, 47);
-            this.btnExit.TabIndex = 7;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -363,7 +365,7 @@
             this.btnUsers.Location = new System.Drawing.Point(12, 357);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(216, 47);
-            this.btnUsers.TabIndex = 6;
+            this.btnUsers.TabIndex = 3;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -380,7 +382,7 @@
             this.btnTickets.Location = new System.Drawing.Point(12, 245);
             this.btnTickets.Name = "btnTickets";
             this.btnTickets.Size = new System.Drawing.Size(216, 47);
-            this.btnTickets.TabIndex = 5;
+            this.btnTickets.TabIndex = 2;
             this.btnTickets.Text = "Tickets";
             this.btnTickets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTickets.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -388,65 +390,82 @@
             this.btnTickets.MouseEnter += new System.EventHandler(this.btnTickets_MouseEnter);
             this.btnTickets.MouseLeave += new System.EventHandler(this.btnTickets_MouseLeave);
             // 
-            // tmrDateTime
-            // 
-            this.tmrDateTime.Tick += new System.EventHandler(this.tmrDateTime_Tick);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(249, 143);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(334, 28);
-            this.comboBox4.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(245, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 21);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Filter By Action";
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(228, 245);
+            this.dataGridView1.Location = new System.Drawing.Point(228, 330);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1272, 655);
-            this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.Size = new System.Drawing.Size(1272, 570);
+            this.dataGridView1.TabIndex = 6;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(115)))), ((int)(((byte)(223)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Location = new System.Drawing.Point(237, 188);
+            this.panel3.Location = new System.Drawing.Point(237, 272);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1254, 10);
-            this.panel3.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(283, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 21);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "actions found";
+            this.panel3.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(245, 208);
+            this.label6.Location = new System.Drawing.Point(245, 294);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 21);
-            this.label6.TabIndex = 13;
+            this.label6.TabIndex = 15;
             this.label6.Text = "###";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(277, 294);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 21);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "actions found";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(245, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 21);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Search By Name";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.FillColor = System.Drawing.Color.White;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.Font_Size = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.ForeColors = System.Drawing.Color.Gray;
+            this.txtSearch.IsPassword = false;
+            this.txtSearch.LineThickness = 1;
+            this.txtSearch.Location = new System.Drawing.Point(244, 210);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.MouseOnHover = System.Drawing.Color.Empty;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.OnCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.OnFocusColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnFocusFontColor = System.Drawing.Color.Empty;
+            this.txtSearch.ReadOnly = false;
+            this.txtSearch.Size = new System.Drawing.Size(334, 40);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSearch.TextName = "Enter Name...";
+            // 
+            // tmrDateTime
+            // 
+            this.tmrDateTime.Tick += new System.EventHandler(this.tmrDateTime_Tick);
             // 
             // pnlTicketsCenter
             // 
@@ -484,7 +503,7 @@
             this.pnlShadow10.BackColor = System.Drawing.Color.DarkGray;
             this.pnlShadow10.Location = new System.Drawing.Point(525, 98);
             this.pnlShadow10.Name = "pnlShadow10";
-            this.pnlShadow10.Size = new System.Drawing.Size(278, 211);
+            this.pnlShadow10.Size = new System.Drawing.Size(278, 212);
             this.pnlShadow10.TabIndex = 28;
             this.pnlShadow10.Visible = false;
             this.pnlShadow10.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlShadow10_Paint);
@@ -525,7 +544,7 @@
             this.pnlShadow9.BackColor = System.Drawing.Color.DarkGray;
             this.pnlShadow9.Location = new System.Drawing.Point(590, 98);
             this.pnlShadow9.Name = "pnlShadow9";
-            this.pnlShadow9.Size = new System.Drawing.Size(278, 211);
+            this.pnlShadow9.Size = new System.Drawing.Size(278, 212);
             this.pnlShadow9.TabIndex = 26;
             this.pnlShadow9.Visible = false;
             this.pnlShadow9.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlShadow9_Paint);
@@ -610,8 +629,6 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // btnSettings
             // 
@@ -626,8 +643,6 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.MouseEnter += new System.EventHandler(this.btnSettings_MouseEnter);
-            this.btnSettings.MouseLeave += new System.EventHandler(this.btnSettings_MouseLeave);
             // 
             // btnLogout
             // 
@@ -642,8 +657,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.MouseEnter += new System.EventHandler(this.btnLogout_MouseEnter);
-            this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
             // 
             // btnActivityLog
             // 
@@ -658,8 +671,6 @@
             this.btnActivityLog.Text = "Activity Log";
             this.btnActivityLog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActivityLog.UseVisualStyleBackColor = true;
-            this.btnActivityLog.MouseEnter += new System.EventHandler(this.btnActivityLog_MouseEnter);
-            this.btnActivityLog.MouseLeave += new System.EventHandler(this.btnActivityLog_MouseLeave);
             // 
             // pnlShadow7
             // 
@@ -672,32 +683,24 @@
             this.pnlShadow7.Visible = false;
             this.pnlShadow7.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlShadow7_Paint);
             // 
-            // btnSubmit
+            // label9
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.Transparent;
-            this.btnSubmit.BackgroundColor = System.Drawing.Color.White;
-            this.btnSubmit.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.BorderRadius = 12;
-            this.btnSubmit.ButtonText = "Submit";
-            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Font_Size = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColors = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.HoverBackground = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.HoverBorder = System.Drawing.SystemColors.Highlight;
-            this.btnSubmit.HoverFontColor = System.Drawing.Color.White;
-            this.btnSubmit.LineThickness = 1;
-            this.btnSubmit.Location = new System.Drawing.Point(612, 143);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(108, 28);
-            this.btnSubmit.TabIndex = 8;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(250, 104);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(197, 45);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "View Tickets";
             // 
-            // frmActivityLog
+            // frmAdminTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.pnlTicketsCenter);
             this.Controls.Add(this.pnlShadow10);
             this.Controls.Add(this.pnlAlertsCenter);
@@ -706,22 +709,21 @@
             this.Controls.Add(this.pnlShadow8);
             this.Controls.Add(this.pnlUserMenu);
             this.Controls.Add(this.pnlShadow7);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmActivityLog";
+            this.Name = "frmAdminTickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmActivityLog";
-            this.Load += new System.EventHandler(this.frmActivityLog_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmActivityLog_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmActivityLog_MouseMove);
+            this.Text = "frmTickets";
+            this.Load += new System.EventHandler(this.frmTickets_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmTickets_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmTickets_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -763,13 +765,14 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnTickets;
-        private System.Windows.Forms.Timer tmrDateTime;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private JMetroTextBox.JMetroTextBox txtSearch;
+        private System.Windows.Forms.Timer tmrDateTime;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel pnlTicketsCenter;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label16;
@@ -789,11 +792,10 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnActivityLog;
         private System.Windows.Forms.Panel pnlShadow7;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label9;
         private JImageButton.JImageButton btnUserProfile;
         private JImageButton.JImageButton btnTicketCenter;
         private JImageButton.JImageButton btnNotificationCenter;
         private JImageButton.JImageButton btnMessageCenter;
-        private JThinButton.JThinButton btnSubmit;
     }
 }
